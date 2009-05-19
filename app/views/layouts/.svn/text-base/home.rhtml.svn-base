@@ -1,3 +1,0 @@
-<%=render :partial=>"/homeHeader"%>
-<%= @content_for_layout %>
-<%=render :partial=>"/homeFooter" %>

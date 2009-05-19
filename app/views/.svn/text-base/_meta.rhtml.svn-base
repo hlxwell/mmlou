@@ -1,5 +1,0 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="title" content="<%=@title?@title+"|":"" %><%=@desc?@desc+"|":"" %> <%=l(:site_meta_title)%>"/>
-<meta name="description" content="<%=@title?@title+"|":"" %><%=@desc?@desc+"|":"" %> <%=l(:site_meta_description)%>"/>
-<meta name="keywords" content=" <%=l(:site_meta_keywords)%>"/>
-<title><%=@title?@title+"|":"" %><%=@desc?@desc+"|":"" %><%=l(:site_label_title)%></title>
