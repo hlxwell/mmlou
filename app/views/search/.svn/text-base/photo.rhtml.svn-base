@@ -1,0 +1,51 @@
+<% cache "/#{getBrowserLanguage()}/search/photo/#{params[:id]}/page/#{params[:page]||=1}" do %>
+<div id="content">
+    <div id="headTitle">
+        <h1><%=l("searchPhoto_label_title")%></h1>
+    </div>
+    <div class="clear">
+    </div>
+    <%=render :partial=>"tab",:locals=>{:current=>"photo"}%>    
+    <div>
+        <div id="container">
+            <div id="main">
+                <div id="searchForm">
+                    <form id="photoSearchForm" name="photoSearchForm" action="/search/photo/" method="post">
+                    <%=l("searchUser_label_enterKeyword")%>：<input type="text" id="keyword" name="id" value="<%=params[:id]%>" class="txt"/>
+                    <input type="submit" value="<%= l("common_button_search") %>" class="Btn"/>
+                    </form>
+                </div>
+				<%=render :partial=>"photoTags", :locals=>{:path=>"/search/photo/"} %>
+                <div id="searchResult">
+                    <div class="Confirm">
+                        <%=l("searchPhoto_label_resultNum",@photoSize,params[:id])%>
+                    </div>
+                    <div class="SearchPhotoList">
+                        <ul class="SmallList">
+                            <% for photo in @photos %>
+                            <li>
+                                <div class="ListPhoto">
+                                    <a href="/<%=photo.user.id %>/photo/view/<%=photo.id %>" title="<%=photo.description %>" target="_blank">
+                                    <img src="<%=getThumbImageUrl(photo) %>" width="100" border="0" alt="<%=photo.tags %>"/>
+                                    </a>
+                                </div>
+                                <p>
+                                From 
+                                <%= link_to photo.user.username, :controller => "user", :action => "index", :user_id => photo.user.id  %>
+                                </p>
+                            </li>
+                            <% end %>
+                        </ul>
+						<!--photos pager-->
+                        <div class="pages">
+                            <%=page_links_full @photo_pages %>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<% end %>

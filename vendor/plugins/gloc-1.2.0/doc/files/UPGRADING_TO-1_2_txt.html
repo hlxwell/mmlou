@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: UPGRADING_TO-1.2.txt</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>UPGRADING_TO-1.2.txt</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>UPGRADING_TO-1.2.txt
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Fri Feb 09 00:40:59 +1100 2007</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This file is mainly intended for users of <a
+href="../classes/GLoc.html">GLoc</a> v1.1. For a full list of changes see
+the CHANGELOG file and believe me, there are MANY a cool, new feature
+there!!
+</p>
+<h2>API changes between <a href="../classes/GLoc.html">GLoc</a> 1.1 and <a href="../classes/GLoc.html">GLoc</a> 1.2</h2>
+<ul>
+<li>l_strftime has had it argument ordcer reversed. It is now
+l_strftime(fmt,date) instead of l_strftime(date,fmt)
+
+</li>
+<li>l_datetime_short() has been removed. Feel free to add as many date/time
+formats as you like though. Use the new !!datetime_fmt directive. (See the
+sample app)
+
+</li>
+<li>Date/time formats no longer require double hash-symbols. ie.
+&#8217;%%A&#8217; is now just &#8217;%A&#8217;.
+
+</li>
+<li>Some localized strings used for Rails date/time helpers have been changed.
+actionview_datehelper_select_*_prefix has been renamed to
+actionview_datehelper_select_*_suffix
+
+</li>
+</ul>
+<h2>Design change</h2>
+<p>
+When I first created <a href="../classes/GLoc.html">GLoc</a>, I designed it
+so that language settings cascaded. So you could have a global language
+setting, and you could set a certain controller to have another certain
+language setting, and then setting the language in instances of that
+controller would only effect that instance, etc etc. First of all, not only
+did I find myself never actually needing that behaviour, but other users
+also found it confusing. Many users would set the language in the
+controller and then not understand why they would also need to explictly
+set the language of model instances before running validation methods. Well
+this behaviour has been replaced by a simpler, one-language-per-process
+model. In simple mode (which is now the default), there is only one
+language setting and it is shared by all instances and classes. This means
+you will now only need to call set_language() once-per-action. If you want
+to enable the old cascading behaviour, you still can by calling <a
+href="../classes/GLoc.html#M000002">GLoc.set_language_mode</a>(:cascading)
+</p>
+<h2>Sample <a href="../classes/GLoc.html">GLoc</a> Application</h2>
+<p>
+To see the new functionality in action, it&#8216;s best just to have a look
+at the new sample application. Specially for the new stuff like
+!!datetime_fmt and !!sameas Check it out here:
+</p>
+<pre>
+  svn://rubyforge.org/var/svn/gloc/supp/sample_rails_app
+</pre>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

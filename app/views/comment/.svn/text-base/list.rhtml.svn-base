@@ -1,0 +1,59 @@
+<!--用户评论页面-->
+<div id="content">
+  <%=userHeaderMenu("comment") %>
+  <div>
+  	<div id="container">
+      <%if @commentedPhotos.size > 0 %>
+        <div id="userComments">
+          <%for commentedPhoto in @commentedPhotos %>
+            <div class="comment">
+              <!--comment Photo-->
+              <div class="commentPic">
+                <a href="/<%=params[:user_id] %>/photo/view/<%=commentedPhoto.id %>"><img src="<%=getSmallImageUrl(commentedPhoto) %>" alt="<%=commentedPhoto.tags%>"></a>
+              </div>
+          
+              <!--Comment content-->
+              <% for comment in commentedPhoto.comments %>
+                <div class="commentContent">
+                  <% if not comment.commentator.nil? %>
+                    <%= link_to "<img class='BuddyIcon' src='#{getPortraitImageUrl(comment.commentator)}' alt='#{comment.commentator.username}' width='48' height='48'/>", :controller => "user", :action => "index", :user_id => comment.commentator.id  %>
+                  <% else %>
+                    <img class="BuddyIcon" src="/images/default_buddy_icon.jpg">
+                  <% end %>
+                  <span class="PostDateTime">
+                  <% if not comment.commentator.nil? %>
+                    <%= link_to comment.commentator.username, :controller => "user", :action => "index", :user_id => comment.commentator.id  %>
+                  <% else %>
+                    <%=l("common_label_userDeleted")%>
+                  <% end %>
+                  - <%=l("commentList_label_sayAt",comment.datetime.strftime("%Y-%m-%d %I:%M %p")) %> :
+                  </span>
+                  <% if isHost or isCurrentUser(comment.commentator) %>
+                     <%=link_to_remote l("commentList_link_deleteComment"),:loading => "showLoading()",:complete=>"hideLoadingAndReload('#{l("commentList_alert_deleteDone")}')", :class=>"Remove",:confirm=>"#{l("commentList_comfirm_confirmDelete")}",:url => {:controller=>:comment,:action=>:delete,:id=>comment.id} %>
+                  <% end %>
+                  <br/>
+                  <div class="commentText">
+                    <%=comment.content %>
+                  </div>
+                  <div class="commentSign">
+                    <%=comment.commentator.userinformation.sign unless comment.commentator.nil?  %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <%end %>
+        </div>
+        <!--photos pager-->
+        <div class="pages">
+          <%=page_links_full @commentedPhoto_pages %>
+        </div>
+      <% else %>
+        <div class="Problem">
+          <%=l("problem_label_noComment")%>
+        </div>
+      <%end %>
+    </div>
+    <div class="clear">
+    </div>
+  </div>
+</div>

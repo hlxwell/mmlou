@@ -1,0 +1,12 @@
+<dl class="blockbar">
+    <dd>
+        <ul>            
+            <li class="title">
+                <%=l("userIncome_label_myPoints") %>:<%=session[:user].point %>
+            </li>
+            <li class="title">
+                <%=l("userIncome_label_myGains") %>:<%=session[:user].gain %>
+            </li>
+        </ul>
+    </dd>
+</dl>

@@ -1,0 +1,68 @@
+<dl>
+    <dt>
+        » VIP管理
+    </dt>
+    <dd>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    用户名
+                </td>
+                <td>
+                    开始时间
+                </td>
+                <td>
+                    结束时间
+                </td>
+                <td>
+                    等级
+                </td>
+                <td>
+                    下载相册数
+                </td>
+                <td>
+                    下载相片数
+                </td>
+                <td>
+                    状态
+                </td>
+                <td>
+                </td>
+            </tr>
+            <% for vip in @vips %>
+            <tr>
+                <td>
+                    <%= link_to vip.user.username, {:controller => "user", :action => "index", :user_id => vip.user_id},{:target=>"_blank"} %>
+                </td>
+                <td>
+                    <%=vip.start_at.strftime("%m-%d %I:%M%p") %>
+                </td>
+                <td>
+                    <%=vip.end_at.strftime("%m-%d %I:%M%p") %>
+                </td>
+                <td>
+                    <%=vip.level %>
+                </td>
+                <td>
+                    <%=vip.albumDownloadCount %>
+                </td>
+                <td>
+                    <%=vip.photoDownloadCount %>
+                </td>
+                <td>
+                    <%=vip.status %>
+                </td>
+                <td>
+                    <%=link_to ( "修改",{:action => "editVip",:id=>vip.id},{:target=>"_blank"} ) %>
+                    <%=link_to_remote( "删除",:confirm=>"是否确定删除？",:loading=>"showLoading()",:complete=>"hideLoading();alert('删除成功！');location.reload();", :url => { :action => "deleteVip",:id=>vip.id } ) %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </dd>
+    <dd>
+        <div class="pages">
+            <%=page_links_full @vip_pages %>
+        </div>
+    </dd>
+</dl>

@@ -1,0 +1,70 @@
+<dl>
+    <dt>
+        » 用户管理
+    </dt>
+    <dd>
+        <a href="/admin/userManage/todayLogin">今天登陆过的用户</a>
+        - <a href="/admin/userManage/todayRegister">今天注册的用户</a>
+        - <a href="/admin/userManage/loginMost">按登陆次数最多排序</a>
+    </dd>
+    <dd>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    用户名
+                </td>
+                <td>
+                    email
+                </td>
+                <td>
+                    相册
+                </td>
+                <td>
+                    照片
+                </td>
+                <td>
+                    评论
+                </td>
+                <td>
+                    登陆/浏览
+                </td>
+                <td>
+                </td>
+            </tr>
+            <% for user in @users %>
+            <tr>
+                <td>
+                    <%= link_to user.username, 
+                    {:controller => "user", :action => "index", :user_id => user.id},
+                    {:title=>"注册:" + user.registerDatetime.strftime("%m-%d %I:%M%p")+",最后登录:"+user.lastLoginDatetime.strftime("%m-%d %I:%M%p"),
+                    :target=>"_blank"} %>
+                </td>
+                <td>
+                    <%=user.email %>
+                </td>
+                <td>
+                    <%=user.allAlbumNum %>
+                </td>
+                <td>
+                    <%=user.allPhotoNum %>
+                </td>
+                <td>
+                    <%=user.allCommentNum %>
+                </td>
+                <td>
+                    <%=user.loginCount %>/<%=user.viewCount %>
+                </td>
+                <td>
+                    <%=link_to_remote( "删除",:confirm=>"用户删除他的图片和相册将会全部删除，是否删除？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "deleteUser",:id=>user.id } ) %>
+                    <%=link_to_remote( "加为会员",:confirm=>"是否真的要加为会员？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "addToVip",:id=>user.id } ) if user.vipinfo.nil? %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </dd>
+    <dd>
+        <div class="pages">
+            <%=page_links_full @user_pages %>
+        </div>
+    </dd>
+</dl>

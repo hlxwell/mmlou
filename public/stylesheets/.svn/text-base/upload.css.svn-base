@@ -1,0 +1,202 @@
+#album_name {
+	width: 470px;
+}
+#uploadr {
+    padding: 0 0 0 2em;
+}
+
+#uploadr dl {
+}
+
+#uploadr dl dt, #uploadr dl dd {
+    line-height: 1.5em;
+}
+
+#uploadr dl dt {
+    font-weight: bold;
+}
+
+#uploadr dl dd {
+    margin: 8px 0 8px 12px;
+}
+
+#uploadr dl#advanced {
+    margin: 1em 0;
+}
+
+#uploadr dl#sending dt {
+    font-weight: normal;
+}
+
+.uploading {
+    background-image: url(/images/working.gif) !important;
+}
+
+#uploadbutton {
+    margin-right: 2em;
+}
+
+#selects {
+    width: 350px;
+}
+
+#preview1 {
+    position: absolute;
+    right: 55px;
+    top: 85px;
+}
+
+#file_selects {
+    text-align:left;
+}
+
+.PrivacySelect ul {
+    list-style-type: none;
+}
+
+.PrivacySelect li {
+    display: block;
+    width: 250px;
+}
+
+.PrivacySelect ul ul {
+    padding-left: 20px;
+}
+
+#uploadTip {
+    border: #f3f3f3 3px solid;
+    padding: 0px 15px 15px 15px;
+    text-align: left;
+    font-size:14px;
+    line-height:18px;    
+    width:190px !important;
+    width:185px;
+}
+
+#uploadTip div{
+    font-size:15px;
+    line-height:18px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:5px;
+}
+
+#uploadr #tags_input {
+    width: 350px;
+    margin-bottom: 5px;
+}
+
+#uploadr #tags_msgr, #uploadr #tags_usertags {
+    width: 350px;
+}
+
+#albumDialog {
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: left;
+    width: 300px;
+    border: 3px solid #000;
+    background-color: #fff;
+}
+
+#albumDialogHeader {
+    padding: 10px;
+    height: 20px;
+    background-color: #f5f5f5;
+}
+
+#albumDialogHeader h4 {
+    color: #333;
+    margin: 0;
+}
+
+#albumDialogBody {
+    padding: 1em 1.2em;
+}
+
+#albumDialogClose {
+    margin-left: 10px;
+}
+
+#albumDialogFormBtns {
+    text-align: right;
+    padding: 0 10px;
+}
+
+#albumSaving {
+    padding: 4px;
+    margin: 8px 0 4px 0;
+    background-color: #EEF2FD;
+    border: 1px solid #D3DEFA;
+}
+
+#albumSaving img {
+    margin-right: 7px;
+    float: left;
+    border: 0;
+    vertical-align: middle;
+}
+
+#albumMessage {
+    padding: 4px;
+    margin: 8px 0 4px 0;
+    background-color: #EEF2FD;
+    border: 1px solid #D3DEFA;
+}
+
+#optionsTrigger {
+    padding: 0.5em 1em;
+    margin: 1em 16em 0 0;
+    background-color: #f5f5f5;
+}
+
+#optionsMore {
+    padding-left: 1em;
+}
+
+#optionsMore ul {
+    list-style-type: none;
+}
+
+#optionsMore li {
+    display: block;
+    width: 250px;
+}
+
+.upload {
+    margin-left: 20px;
+}
+
+.upload .uploadby {
+    clear: both;
+    margin: 10px;
+    height: 85px;
+}
+
+.upload .uploadby .icon {
+    width: 76px;
+    height: 76px;
+    margin: 5px;
+    float: left;
+}
+
+.upload .uploadby .desc {
+    float: left;
+    margin: 5px;
+    width: 350px;
+}
+
+.upload .uploadby .desc a {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.upload .uploadby .desc p {
+    margin-top: 5px;
+}
+
+.upload .uploadby .desc p a {
+    font-size: 1em;
+    font-weight: bold;
+}

@@ -1,0 +1,47 @@
+<% cache "/#{getBrowserLanguage()}/search/download/#{params[:id]}/page/#{params[:page]||=1}"  do %>
+<div id="content">
+    <div id="headTitle">
+        <h1><%=l("searchDownload_label_title")%></h1>
+    </div>
+    <div class="clear">
+    </div>
+    <div>
+        <div id="container">
+            <div id="main">
+                <%=render :partial=>"albumTags", :locals=>{:path=>"/search/download/"} %>
+                <div id="searchResult">
+                    <div class="Confirm">
+                        <%=l("searchDownload_label_resultNum",@albumSize) %>
+                    </div>
+                    <div class="SearchAlbumList">
+                        <%for album in @albums %>
+                        <div class="SearchSets">
+                            <div class="SetCase">
+                                <a href="/<%=album.user.id %>/album/view/<%=album.id %>"><img class="setThumb" src="<%=getAlbumCover(album) %>" width="75" height="75" alt="<%=album.name %>"/></a>
+                            </div><h4><a class="Seta" href="/<%=album.user.id %>/album/view/<%=album.id %>" title="<%=album.name %>"><%=album.name %></a></h4>
+                            <p>
+                                <%=l("album_label_numOfPhotos",album.allAuthPhotoNum)%>
+                                <br/>
+                                From 
+                                <%= link_to album.user.username, :controller => "user", :action => "index", :user_id => album.user.id  %><br/>
+                                <%if album.isPacked %>
+                                    <%=l("userPacks_label_downloadPoints",album.downloadPoint) %>
+                                    <%=l("userPacks_label_downloadCount",album.downloadCount) %>
+                                    <a href="/<%=album.user.id %>/album/download/<%=album.id %>"><%=l("common_link_download")%></a>
+                                <%end %>
+                            </p>
+                        </div>
+                        <%end %>
+						<!--photos pager-->
+                        <div class="pages">
+                            <%=page_links_full @album_pages %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<% end %>

@@ -1,0 +1,50 @@
+<dl>
+    <dt>
+        » 用户积分操作日志
+    </dt>
+    <dd>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    用户ID
+                </td>
+                <td>
+                    操作
+                </td>
+                <td>
+                    分数
+                </td>
+                <td>
+                    时间
+                </td>
+                <td>
+                    IP
+                </td>
+            </tr>
+            <% for log in @logs %>
+            <tr>
+                <td>
+                    <%=log.user_id %>
+                </td>
+                <td>
+                    <%=log.operation %>
+                </td>
+                <td>
+                    <%=log.point %>
+                </td>
+                <td>
+                    <%=log.datetime.strftime("%Y-%m-%d %I:%M%p") %>
+                </td>
+                <td>
+                    <%=log.ip %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </dd>
+    <dd>
+        <div class="pages">
+            <%=page_links_full @log_pages %>
+        </div>
+    </dd>
+</dl>

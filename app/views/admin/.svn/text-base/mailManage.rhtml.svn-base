@@ -1,0 +1,51 @@
+<dl>
+    <dt>
+        » 邮件管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:before=>"if($('photoIDs').value.length == 0){alert('照片ID不能为空！');return false;}",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);",:url => { :controller=>:admin, :action => :addExpressMail} ) %>
+        <table cellspacing="10">
+            <tr>
+                <td>
+                    相册ID <input id="photoIDs" name="expressmail[photoIDs]" size="55" maxlength="255" type="text">
+                </td>
+                <td>
+                    <%=submit_tag "添加新快报" %>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+    <dd>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    照片ID
+                </td>
+                <td>
+                    期刊日期 
+                </td>
+                <td>
+                </td>
+            </tr>
+            <%for mail in @expressMails %>
+            <tr>
+                <td width="300px" valign="top">
+                    <%=showPhotosByIDs(mail.photoIDs) %>
+                </td>
+                <td valign="top">
+                    <%=mail.datetime.strftime("%m-%d %I:%M%p") %>
+                </td>
+                <td valign="top">
+                </td>
+                <td valign="top">
+                    <%=link_to_remote( "删除",:confirm=>"是否删除？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "deleteExpressMail",:id=>mail.id } ) %>
+                    <%=link_to_remote( "发送快报",:confirm=>"是否发送？",:loading=>"showLoading()",:complete=>"hideLoadingAndAlert(request.responseText);", :url => { :action => "sendExpressMail",:id=>mail.id } ) %>
+                    <a href="/admin/viewExpressMail/<%=mail.id%>?lang=cn" target="_blank">中</a>
+                    <a href="/admin/viewExpressMail/<%=mail.id%>?lang=en" target="_blank">英</a>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </dd>
+</dl>

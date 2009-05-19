@@ -1,0 +1,49 @@
+<% cache "/#{getBrowserLanguage()}/tag/subject/#{params[:id]}/page/#{params[:page]||=1}/commentPage/#{params[:commentPage]||=1}" do %>
+<div id="content">
+    <div id="heading">
+        <h1><a href="/tag"><%=l("subject_label_subjectTitle") %></a> : <%=params[:id] %></h1>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="rightWrapper">
+        <div id="container">            
+			<%=render :partial=>"top5albums"%>
+			<div id="main" class="withLeftLine" style="float:right">
+                <div class="TaggedPhotoList">
+                	<% if @photos.size > 0 %>
+                    <ul class="SmallList">
+                    	<% for photo in @photos%>
+                        <li>
+                            <div class="ListPhoto">
+                                <a href="/<%=photo.user.id %>/photo/view/<%=photo.id %>" title="<%=photo.description %>" target="_blank">
+                                <img src="<%=getThumbImageUrl(photo) %>" width="100" border="0" alt="<%=photo.tags %>"/>
+                                </a>
+                            </div>
+                            <p>
+                            From 
+                            <%= link_to photo.user.username, :controller => "user", :action => "index", :user_id => photo.user.id  %>
+                            </p>
+                        </li>
+						<% end %>
+                    </ul>
+                    <div class="pages">
+                        <%=page_links_full @photo_pages %>
+                    </div>
+					<% else %>
+						<div class="Problem">
+							<%=l("subject_label_noPhotoInSubject",params[:id]) %>
+						</div>
+					<% end %>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+	</div>
+	<%=render :partial=>"comments"%>
+	<div id="hotTagTitle"><%=l("subject_label_hotTagTitle")%></div>
+	<%=render :partial=>"/subjectTags"%>
+</div>
+<% end %>

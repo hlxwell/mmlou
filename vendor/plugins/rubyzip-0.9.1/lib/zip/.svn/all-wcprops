@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip
+END
+stdrubyext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip/stdrubyext.rb
+END
+ioextras.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip/ioextras.rb
+END
+ziprequire.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip/ziprequire.rb
+END
+tempfile_bugfixed.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip/tempfile_bugfixed.rb
+END
+zip.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip/zip.rb
+END
+zipfilesystem.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/zip/zipfilesystem.rb
+END

@@ -1,0 +1,8 @@
+<% cache "/#{getBrowserLanguage()}/search/albumTags" do %>
+<div id="tags" class="searchTag">
+    <h2><span class="raquo">&raquo;</span> Tag</h2>
+    <% for tag in Tag.all %>
+    	<span><a href="<%=path+tag.tagName %>" onmouseover="Tip('<%= getTagCoverUrl(tag) %>')" class="<%=getTagSizeByAlbumNum(tag.referedAlbums)%>"><%=tag.tagName %></a></span>
+    <% end %>
+</div>
+<% end %>

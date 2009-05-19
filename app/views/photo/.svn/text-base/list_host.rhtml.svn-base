@@ -1,0 +1,90 @@
+<div id="content">
+    <%=userHeaderMenu("photo") %>
+    <div class="clear">
+    </div>
+    <div>
+        <div id="container">
+            <table class="LayoutTop" cellspacing="0" cellpadding="0">
+                <tr valign="top">
+                    <td>
+                        <% if @photos.size > 0 %>
+                        <table id="archiveDetailView" width="100%">
+                            <!--列出相册中的图片--><% for j in 0..@photos.size/3 %>
+                            <tr>
+                                <% for k in 0..2 %>
+                                <td class="PhotoGrid">
+                                    <%i=j*3+k %>
+                                    <% if @photos[i] %>
+                                    <div class="StreamView">
+                                        <div id="image_normal">
+                                            <div class="Photo">
+                                                <a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id%>"><img id="photo_<%=@photos[i].id %>" src="<%=getSmallImageUrl(@photos[i])%>" alt="<%=l("album_imgAlt_clickViewDetail",@photos[i].tags) %>"/></a>
+                                            </div>
+                                            <div id="description" class="descriptionEditor">
+                                            	<!--必须一行-->
+                                                <span id="photoDescription<%= @photos[i].id %>"><% if @photos[i].description.nil? or @photos[i].description.length<1 %><%=l("album_label_clickToAddDetail") %><% else %><%= @photos[i].description %><% end %></span>
+                                                <script type="text/javascript">
+                                                    //<![CDATA[
+                                                    new Ajax.InPlaceEditor('photoDescription<%= @photos[i].id %>', '/photo/updateDescription/<%= @photos[i].id %>', {
+                                                        okText: '<%=l("common_button_save")%>',
+                                                        cancelText: '<%=l("common_button_cancel")%>',
+                                                        savingText: '<%=l("common_label_saving")%>',
+                                                        clickToEditText: '<%=l("userIndex_label_addDescription")%>',
+                                                        submitOnBlur: true,
+                                                        cols: 27,
+                                                        rows: 5,
+                                                        callback: function(form, value){
+                                                            return 'description=' + value
+                                                        }
+                                                    })
+                                                    //]]>
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="Activity">
+                                            (<a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id %>#comment" class="plain"><%=l("userIndex_label_commentsNum",@photos[i].commentsCount) %></a>
+                                            / <%=l("userIndex_label_beViewed",@photos[i].clickCount) %>)
+                                        </div>
+                                        <div class="Privacy">
+                                            <% if @photos[i].isAuth %>
+                                            <img src="/images/public.png" align="absmiddle"/><%=l("userIndex_label_photoAuthed") %>
+                                            <% else %>
+                                            <img src="/images/private.png" align="absmiddle"/><%=l("userIndex_label_photoUnauthed") %>
+                                            <% end %>
+                                        </div>
+                                        <div class="DateTime">
+                                            <%=l("userIndex_label_uploadAt") %><%=@photos[i].datetime.strftime("%Y-%m-%d %I:%M%p") %>
+                                            |<%=link_to_remote l("common_link_delete"), :loading => "showLoading();",:complete=>"hideLoadingAndReload(request.responseText);",:class=>"Remove",
+                                            :url => {:controller=>:photo,:action=>:delete,:id=>@photos[i].id } %>
+                                        </div>
+                                    </div>
+                                    <% else %>
+                                    <div class="StreamView">
+                                    </div>
+                                    <% end %>
+                                </td>
+                                <% end %>
+                            </tr>
+                            <% end %>
+                        </table>
+                        <!--photos pager-->
+                        <div class="pages">
+                            <%=page_links_full @photo_pages %>
+                        </div>
+                        <% else %>
+                        <div class="Problem">
+                            <%=l("problem_label_noPhotosUploaded") %>
+                        </div>
+                        <% end %>
+                    </td>
+                    <td width="10">
+                        &nbsp;
+                    </td>
+                    <!--############### right bar -->
+                </tr>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>

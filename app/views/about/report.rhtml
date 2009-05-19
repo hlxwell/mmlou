@@ -1,0 +1,60 @@
+<div id="content">
+  <div id="headTitle">
+    <h1><%=l("report_label_title")%></h1>
+  </div>
+  <div class="clear">
+  </div>
+  <div>
+    <div id="container">
+      <div class="thin">
+        <div class="inner PostForm">
+          <% if @alertMessage %>
+            <div class="Confirm" id="successMessages">	
+              <%=@alertMessage %>
+            </div>
+          <% else %>
+            <form id="abuse_form" name="abuse_form" action="/about/report" method="post">
+              <dl>
+                <dt>
+                  <%=l("common_label_type")%>
+                </dt>
+                <dd>
+                  <%= select("report", "reportType", %w{发现性暗示和性挑衅类图片 发现反动、危害社会公共安全等言论 发现自己的照片被侵权了 有用户滥发广告信息 其他一些问题}) %>
+                </dd>
+                <dt>
+                  <%=l("common_label_desc")%>
+                </dt>
+                <dd>                            	
+                  <textarea id="reportContent" name="report[content]" rows="9" cols="60" class="text">
+                      举报地址是(Report Address)：http://www.mmlou.com<%=params[:page] %><br>问题(Problem)：
+                  </textarea>
+                  <script type="text/javascript">
+                    window.onload = function()
+                    {
+                      var oFCKeditor = new FCKeditor('reportContent', '400', '180', 'Basic', '' );
+                      oFCKeditor.ReplaceTextarea();
+                    }
+                  </script>
+                  <p>
+                    如果你发现有任何图片或者页面不符合我们的法律条款的请尽管举报，我们将立即做出正确的处理！
+                    请详细填写发现的问题，以便我们处理问题。谢谢！
+                  </p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  &nbsp;
+                </dt>
+                <dd class="submit">
+                <input id="submit" type="submit" value="<%=l("report_button_submit")%>" class="Btn"/>
+                       </dd>
+              </dl>
+            </form>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="clear">
+    </div>
+  </div>
+</div>

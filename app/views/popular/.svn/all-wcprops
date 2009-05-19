@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/147/mmlou/trunk/app/views/popular
+END
+album.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/147/mmlou/trunk/app/views/popular/album.rhtml
+END
+mostFavorite.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/15/mmlou/trunk/app/views/popular/mostFavorite.rhtml
+END
+_tab.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/popular/_tab.rhtml
+END
+mostComment.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/15/mmlou/trunk/app/views/popular/mostComment.rhtml
+END
+photo.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/app/views/popular/photo.rhtml
+END

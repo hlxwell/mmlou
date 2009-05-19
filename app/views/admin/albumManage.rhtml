@@ -1,0 +1,107 @@
+<dl>
+    <dt>
+        » 相册管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndAlert(request.responseText);",:url => { :controller=>:admin, :action => :authAlbums, :albumIDs=>@albumIDs} ) %>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    相册名
+                </td>
+                <td>
+                    所属用户
+                </td>
+                <td>
+                    发布时间
+                </td>
+                <td>
+                    照片数
+                </td>
+                <td>
+                    是否认证
+                </td>
+                <td width="30">
+                </td>
+                <td width="60">
+                </td>
+            </tr>
+            <%for album in @albums %>
+            <tr>
+                <td>
+                    <a href="/<%=album.user.id %>/album/view/<%=album.id %>" target="_blank"><%=album.name %></a>
+                </td>
+                <td>
+                    <%= link_to album.user.username, {:controller => "user", :action => "index", :user_id => album.user.id},{:target=>"_blank"} %>
+                </td>
+                <td>
+                    <%=album.datetime.strftime("%m-%d %I:%M%p") %>
+                </td>
+                <td>
+                    <%=album.allAuthPhotoNum %>/ <%=album.allPhotoNum %>
+                </td>
+                <td>
+                    <input type="checkbox" name="<%=album.id %>"<%="checked" if album.auth? %> value="<%=album.auth? %>">
+                </td>
+                <td>
+                    <%=link_to_remote( "删除",:confirm=>"相册中的照片都会被删除，是否删除？",:loading=>"showLoading()",:complete=>"hideLoading();alert('删除成功！');location.reload();", :url => { :action => "deleteAlbum",:id=>album.id } ) %>
+                </td>
+                <td>
+                    <a href="/admin/albumHTML/<%=album.id%>" target="_blank">HTML代码</a>
+                    <br>
+                    <a href="/admin/albumUBB/<%=album.id%>" target="_blank">UBB代码</a>
+                </td>
+            </tr>
+            <% end %>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td colspan="3">
+                    <a href="javascript:checkReverse()">反选</a>
+                    - <a href="javascript:checkAll()">全选</a>
+                    - <a href="javascript:uncheckAll()">全不选</a>
+                </td>
+                <td>
+                    <input type="submit" value="认证">
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+    <dd>
+        <div class="pages">
+            <%=page_links_full @album_pages %>
+        </div>
+    </dd>
+</dl>
+<script language="javascript">
+    function checkReverse(){
+        var checkboxs = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxs.length; i++) {
+            if (checkboxs[i].type == "checkbox") 
+                checkboxs[i].checked = !checkboxs[i].checked;
+        }
+    }
+    
+    function checkAll(){
+        var checkboxs = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxs.length; i++) {
+            if (checkboxs[i].type == "checkbox") 
+                checkboxs[i].checked = true;
+        }
+    }
+    
+    function uncheckAll(){
+        var checkboxs = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxs.length; i++) {
+            if (checkboxs[i].type == "checkbox") 
+                checkboxs[i].checked = false;
+        }
+    }
+</script>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <%=render_partial("/meta") %>
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/ico"/>
+        <!--Load CSS--><%=stylesheet_link_tag "pay","user_home","search","tabs","photo","photos_view","posts","upload","comment","settings","account","main","tagCloud","about","popular","profile","tag","help" %>
+        <!--Load JScript--><%=javascript_include_tag "main","prototype","effects","controls","dragdrop","fckeditor/fckeditor","addFavor" %>
+        <script>
+	        function window.onbeforeunload()
+	        {
+	                if(event.clientX>document.body.clientWidth&&event.clientY<0||event.altKey||event.ctrlKey)
+	                {
+	                     addFavor('<%=l("menu_label_favorateTitle")%>','http://www.mmlou.com');
+	                }
+	        }
+        </script>
+    </head>
+    <body id="body">
+        <!--Load JScript--><%= javascript_include_tag "wz_tooltip" %>
+        <div id="header">
+            <!-- ############ Nav start #################-->
+            <dl id="globalnav">
+                <dt id="mmlouIn-logo">
+                    <a href="http://www.mmlou.com/" class="logo"><img src="/images/<%=l("common_url_logoMini")%>" alt="<%=l("common_url_logoMini")%>"/></a>
+                </dt><!--####### account start ###########-->
+                <dd id="account-menu">
+                    <ul class="menu">
+                        <% if session[:user] %>
+                        <li id="menu-mine">
+                            <%= l(:userMenu_label_hello) %>
+							<%=l("common_link_vipMark") if session[:user].isVIP %>
+							<I><%= session[:user].username %></I>
+                            - 
+                        </li>
+                        <li>
+                            <b><%= link_to l(:userMenu_link_myfloor), :controller => "user", :action => "index", :user_id => session[:user].id %></b>
+                        </li>
+                        <li>
+                            <a href="/user/account"><%= l(:userMenu_link_account) %></a>
+                        </li>
+                        <li>
+                            <a href="/photo/upload"><%= l(:userMenu_link_upload) %></a>
+                        </li>
+						<!--
+                        <li>
+                            <a href="/user/buyPoint"><%= l(:userMenu_link_buyPoint) %></a>
+                        </li>
+						-->
+						<li>
+                            <a href="/user/joinVip" onmouseover='Tip("<%= l("common_label_joinVipAD") %>")'><b><%= l(:userMenu_link_joinVip) %></b></b></a>
+                        </li>
+                        <li>
+                            <a href="/about/faq"><%= l(:userMenu_link_help) %></a>
+                        </li>
+                        <li>
+                            <a href="/user/logout"><%= l(:userMenu_link_logout) %></a>
+                        </li>
+                        <% else %>
+                        <li>
+                            <a href="/user/login"><%= l(:userMenu_link_login) %></a>
+                        </li>
+                        <li>
+                            <a href="/user/register"><%= l(:userMenu_link_signUp) %></a>
+                        </li>
+                        <li>
+                            <a href="/about/faq"><%= l(:userMenu_link_help) %></a>
+                        </li>
+                        <% end %>
+                        <% if session[:admin] %>
+                        <li>
+                            <a href="/admin/photoManage"><%= l(:userMenu_link_manage) %></a>
+                        </li>
+                        <li>
+                            <a href="/admin/logout"><%= l(:userMenu_link_logoutManage) %></a>
+                        </li>
+                        <% end %>
+                    </ul>
+                </dd>
+                <!--####### Nav start ###########-->
+                <dd id="site-menu">
+                    <ul id="main-menu">
+                        <li id="menu-home" class="selected">
+                            <a href="/"><%= l(:menu_link_home) %></a>
+                        </li>
+                        <li>
+                            <a href="/user/home"><%= l(:menu_link_recommend) %></a>
+                        </li>
+                        <li>
+                            <a href="/tag"><%= l(:menu_link_subject) %></a>
+                        </li>
+                        <li>
+                            <a href="/search/comment"><%= l(:menu_link_comments) %></a>
+                        </li>
+                        <li>
+                            <a href="/search/photo"><%= l(:menu_link_searchPhoto) %></a>
+                        </li>
+                        <li>
+                            <a href="/search/album"><%= l(:menu_link_searchAlbum) %></a>
+                        </li>
+                        <li>
+                            <a href="/search/user"><%= l(:menu_link_searchUser) %></a>
+                        </li>
+                        <li>
+                            <a href="/search/download"><%= l(:menu_link_downloadPack) %></a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>

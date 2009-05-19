@@ -1,0 +1,31 @@
+<!--明星用户-->
+<div class="img-box">
+    <div class="box-content">
+        <ul class="box-info">
+            <li class="td1">
+                <%=l("userHome_label_starUsers") %>
+            </li>
+            <li class="td2">
+                <%=l("userHome_label_starUsersDesc") %>
+            </li>
+            <li class="td3">
+                <a href="/search/user"><%=l("common_link_more") %></a>
+            </li>
+        </ul>
+        <div style="CLEAR: both">
+        </div>
+        <ul class="img-list">
+            <% for user in @starUsers %>
+            <li class="five-list">
+                <a href="/<%=user.id %>/user/index" target="_blank"><img class="BuddyIcon headpic" width="48" height="48" alt="<%=user.username %>" src="<%=getPortraitImageUrl(user) %>"></a>
+                <br>
+                <p class="margintop5px">
+                    <a href="/<%=user.id %>/user/index" target="_blank"><%=user.username %></a>
+                </p>
+            </li>
+            <% end %>
+        </ul>
+        <div style="CLEAR: both">
+        </div>
+    </div>
+</div>

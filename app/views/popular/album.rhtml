@@ -1,0 +1,37 @@
+<div id="content">
+        <%=userHeaderMenu("popular") %>
+        <div class="clear">
+        </div>
+        <%=render :partial=>"tab",:locals=>{:current=>"album"}%>
+        <div id="container">
+                <div class="PopularDesc">
+                        <%=l("popular_label_albumDesc")%>
+                </div>
+                <div id="popularPhotos">
+                        <% if @albums.size > 0 %>
+                            <% for album in @albums %>
+                                <div class="StatStuffAlbum">
+                                        <div class="PopularAlbum" id="#">
+                                                <a href="/<%=album.user_id %>/album/view/<%=album.id %>" title="<%=album.name %>"><img src="<%=getAlbumCover(album)%>" width="75" height="75" alt="<%=album.name %>" class="Photo"/></a>
+                                        </div>
+                                        <div class="PopularStat">
+                                                <div class="Title">
+                                                        <h3><a href="/<%=album.user_id %>/album/view/<%=album.id %>"><%=album.name %></a></h3>
+                                                </div>
+                                                <p class="Stat">
+                                                        &bull; <%=l("common_label_clickCount") %> <b><%=album.clickCount %></b>
+                                                </p>
+                                        </div>
+                                </div>
+                            <% end %>
+                            <div class="pages">
+                                    <%=page_links_full @album_pages %>
+                            </div>
+                        <% else %>
+                            <div class="Problem">
+                                    <%=l("problem_label_noAlbumCreated")%>
+                            </div>
+                        <% end %>
+                </div>
+        </div>
+</div>

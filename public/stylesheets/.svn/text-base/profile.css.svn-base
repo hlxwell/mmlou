@@ -1,0 +1,23 @@
+.userInfo {
+	width: 500px;
+	padding: 5px;
+	margin: 0px auto;
+}
+
+.userInfo .title{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-bottom: #dddddd 1px solid;
+}
+
+.userInfo table td{
+	font-size: 14px;
+	padding:5px;
+}
+
+.userInfo table .label{
+	width: 70px;
+	text-align: right;
+}

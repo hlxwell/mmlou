@@ -1,0 +1,915 @@
+.Set {
+    width: 130px;
+    text-align: left;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.Set h4 {
+    width: 120px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Set p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #777;
+}
+
+.Sets {
+    position: relative;
+    width: 112px;
+    height: 210px;
+    text-align: center;
+    float: left;
+    padding-right: 4px;
+    margin-right: 3px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.Sets h4 {
+    width: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Sets p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #777;
+}
+
+.SetCase {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    width: 91px;
+    height: 95px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    background: url(/images/set_case.gif) no-repeat;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.SetCase img {
+    border: 1px solid #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.SetCase img.Icon {
+    border: 0;
+}
+
+.SetCommentsLink {
+    position: absolute;
+    left: 10px;
+    top: 65px;
+}
+
+.SetCaseStar {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    width: 91px;
+    height: 95px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    background: url(/images/set_case_star.gif) no-repeat;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.SetCaseStar img {
+    border: 1px solid #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.SetCaseStar img.Icon {
+    border: 0;
+}
+
+.Seta:link, .Seta:visited {
+    color: #6B9F1F;
+    text-decoration: none;
+}
+
+.Seta:hover { 
+	color: #ffffff;   
+    text-decoration: none;
+    background: #6B9F1F;	
+}
+
+.Seta:active {
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #6B9F1F;
+}
+
+div.OwnerMeta {
+    height: 65px;
+}
+
+table.LayoutTop {
+    width: 100%;
+    margin-top: 10px;
+}
+
+td.PhotoGrid {
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#archiveDetailView {	
+	width:100%;
+}
+
+.StreamView {
+    width: 240px;
+}
+
+.StreamView h4 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+    width: 240px;
+}
+
+.StreamView .Photo {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.StreamView .Desc {
+    width: 225px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.StreamView .Activity {
+    color: #666;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.StreamView .Privacy {
+    color: #666;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width: 240px;
+}
+
+.StreamView .Privacy img {
+    border: none;
+}
+
+.StreamView .DateTime {
+    color: #666;
+    margin-bottom: 18px;
+    margin-top: 5px;
+    width: 240px;
+}
+
+.DetailView {
+    width: 240px;
+    margin-bottom: 20px;
+}
+
+.DetailView h4 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+.DetailView .Photo {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-top: 4px;
+}
+
+.DetailView .Meta {
+    width: 235px;
+    margin: 0 0 6px 0;
+}
+
+.DetailView .MetaDetail {
+    margin-top: 5px;
+}
+/* For Editable */
+.small-title-display {
+    font-size: 14px;
+    font-weight: bold;
+    width: 240px;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.small-title-editor {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px;
+    margin-bottom: 5px;
+    width: 230px;
+    border: 1px inset #cdd7b5;
+    background-color: #eff9e4;
+    white-space: normal;
+}
+
+.small-des-display {
+    font-size: 12px;
+    width: 240px;
+    padding: 2px 0px 2px 3px;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.small-des-editor, : focus.small-des-editor {
+    font-size: 12px;
+    padding: 3px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    width: 230px;
+    height: 125px;
+    border: 1px inset #cdd7b5;
+    background-color: #eff9e4;
+    background-image: none;
+}
+
+* html .small-des-display {
+    word-wrap: break-word;
+}
+
+div#albumsList {
+    padding: 10px 0px 0px 15px;
+}
+/*div#albumView {margin:0px 5px 5px 5px;padding:20px;border-bottom:10px solid #f3f3f3;border-right:10px solid #f3f3f3;border-left:10px solid #f3f3f3;}*/
+div#albumPhotographerView {
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 5px solid #f3f3f3;
+}
+
+div#albumViewHeading { /*margin: 5px 5px 0px 5px;*/
+    height: 27px;
+    background: url('/images/album/middle.gif') repeat-x;
+}
+
+div#albumViewHeading {
+    height: 27px;
+    background: url(/images/album/middle.gif) repeat-x;
+    position: relative;
+}
+
+div#albumViewHeading div.albumView-right {
+    float: right;
+    width: 270px;
+    margin-right: 15px;
+}
+
+div#albumViewHeading label.left-conner {
+    display: block;
+    width: 4px;
+    position: absolute;
+    height: 27px;
+    background: url(/images/album/left.gif);
+    left: 0;
+    top: 0;
+}
+
+div#albumViewHeading label.right-conner {
+    display: block;
+    width: 4px;
+    position: absolute;
+    height: 27px;
+    background: url(/images/album/right.gif);
+    right: 0;
+    top: 0;
+}
+
+div#albumViewHeading a {
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    float: left;
+    text-decoration: none;
+    position: relative;
+    padding: 0 10px;
+    margin-top: 3px;
+}
+
+div#albumViewHeading a.smart-img {
+    padding-top: 0 !important;
+    padding-top: 2px;
+}
+
+div#albumViewHeading label {
+    display: block;
+    float: left;
+    width: 3px;
+    height: 21px;
+    line-height: 21px;
+    position: absolute;
+}
+
+div#albumViewHeading a:hover label.left-tab {
+    background: url(/images/album/sleft.gif) no-repeat;
+    left: 0;
+    top: 0;
+}
+
+div#albumViewHeading a:hover label.right-tab {
+    background: url(/images/album/sright.gif) no-repeat;
+    width: 4px;
+    right: 0;
+    top: 0;
+}
+
+div#albumViewHeading a:hover {
+    background: url(/images/album/smiddle.gif) repeat-x;
+}
+
+div#albumViewHeading a:active label.left-tab {
+    background: url(/images/album/aleft.gif) no-repeat;
+    left: 0;
+    top: 0;
+}
+
+div#albumViewHeading a:active label.right-tab {
+    background: url(/images/album/aright.gif) no-repeat;
+    right: 0;
+    top: 0;
+}
+
+div#albumViewHeading a:active {
+    background: url(/images/album/amiddle.gif) repeat-x;
+}
+
+.leftborder {
+    background: url('/images/album/left.gif') no-repeat;
+    float: left;
+    height: 27px;
+    width: 11px;
+}
+
+.rightborder {
+    background: url('/images/album/right.gif') no-repeat;
+    float: right;
+    height: 27px;
+    width: 11px;
+}
+
+.controlbar {
+    width: 728px;
+    float: left;
+    height: 27px;
+}
+
+.controlbar a, .controlbar a:link, .controlbar a:visited {
+    color: #595959;
+    height: 21px;
+    margin: 4px 2px 0 0;
+    display: block;
+    vertical-align: bottom;
+    text-decoration: none;
+    position: relative;
+}
+
+.controlbar a:hover {
+    color: #595959;
+}
+
+.controlbar a span.leftcorner {
+    background: none !important;
+    background: url("/images/album/sleft.gif") no-repeat;
+    height: 21px;
+    width: 3px;
+    display: block;
+    float: left;
+    background-position: 0% 42px;
+}
+
+.controlbar a:hover span.leftcorner {
+    background: url("/images/album/sleft.gif") top left !important;
+    height: 21px;
+    width: 3px;
+    display: block;
+    float: left;
+    position: relative;
+    background-position: 0% 0;
+}
+
+.controlbar a:active span.leftcorner {
+    background: url("/images/album/aleft.gif") top left !important;
+    height: 21px;
+    width: 3px;
+    display: block;
+    float: left;
+    position: relative;
+    background-position: 0% 0;
+}
+
+.controlbar a span.smiddle {
+    background: url("/images/album/smiddle.gif") repeat-x;
+    height: 21px;
+    display: block;
+    float: left;
+    padding: 3px;
+    background-position: 0% -21px;
+}
+
+.controlbar a:hover span.smiddle {
+    height: 21px;
+    display: block;
+    float: left;
+    padding: 3px;
+    position: relative;
+    background-position: 0% 0;
+}
+
+.controlbar a:active span.smiddle {
+    background: url("/images/album/amiddle.gif") repeat-x;
+}
+
+.controlbar a span.rightcorner {
+    background: none !important;
+    background: url("/images/album/sright.gif") no-repeat;
+    height: 21px;
+    width: 4px;
+    display: block;
+    float: left;
+    background-position: 0% 42px;
+}
+
+.controlbar a:hover span.rightcorner {
+    background: url("/images/album/sright.gif") top left !important;
+    height: 21px;
+    width: 4px;
+    display: block;
+    float: left;
+    background-position: 0% 0;
+    position: relative;
+}
+
+div#albumViewHeading a.delete {
+    float: right;
+}
+
+div#albumViewHeading a:hover.delete {
+    color: red;
+}
+
+div#albumViewHeading a.right {
+    float: right;
+}
+
+div#albumViewHeading table {
+    background-color: #f3f3f3;
+}
+
+div#albumViewHeading table tr {
+    height: 25px
+}
+
+div#albumViewHeading .viewstyle {
+    width: 250px padding-right
+
+: 5px;
+
+text-align:right;
+}
+
+div.albumtitle {
+    width: 350px;
+    overflow: hidden;
+}
+
+div#albumOwner {
+    margin: 5px 1px 8px 1px;
+}
+
+div#albumOwner h2 {
+    margin: 0px 0px 5px 0px;
+    float: left;
+    width: 300px;
+}
+
+div#albumOwner div.albumstat {
+    float: right;
+    width: 230px;
+    text-align: right;
+    margin: 12px 10px;
+}
+
+div.albumCoverThumb {
+    float: left;
+    margin: 12px 0;
+}
+
+.albumOwner {
+    font-size: 16px;
+    float: left;
+    margin: 12px 5px 5px;
+    width: 350px;
+}
+
+div.albumDetail {
+    float: left;
+    width: 645px;
+    margin-bottom: 12px;
+}
+
+div.albumDetail div.albumstat {
+    float: right;
+    width: auto;
+    margin-top: 12px;
+}
+
+div.albumDetail div.albumOperation {
+	text-align: right;
+	font-weight: bold;
+    margin-top: 5px;
+	color: #6b9f1f;
+}
+
+div#comments h3 span {
+    font-size: 0.8em;
+    color: #8E8E8E;
+}
+
+div#comments h3 span a:link {
+    border-bottom: 1px solid;
+}
+
+.AlbumCover {
+    width: 300px;
+    vertical-align: top;
+}
+
+.AlbumPhotos {
+    position: relative;
+}
+
+.AlbumPhotos ul {
+    list-style: none;
+    float: right;
+    width: 410px;
+}
+
+.AlbumPhotos ul li {
+    display: block;
+    width: 77px;
+    height: 77px;
+    float: left;
+    margin: 0 4px 4px 0;
+    padding: 0;
+}
+
+.currentCover {
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.currentCover h2 {
+    font-size: 1.2em;
+    color: black;
+}
+
+.candidateCovers {
+    position: relative;
+}
+
+.candidateCovers h2 {
+    font-size: 1.2em;
+    color: black;
+}
+
+.candidateCovers h2 span {
+    color: #FEAD80;
+}
+
+.candidateCovers ul {
+    list-style: none;
+    float: right;
+    width: 550px;
+}
+
+.candidateCovers ul li {
+    display: block;
+    width: 77px;
+    height: 97px;
+    float: left;
+    margin: 0 12px 10px 0;
+    padding: 0;
+}
+
+div.selectCover {
+    padding-left: 30px;
+}
+
+div#otherAlbums {
+    padding: 5px 20px;
+}
+
+div.MoreSet {
+    font-size: 14px;
+    font-weight: bold;
+    width: 80px;
+    text-align: left;
+    float: left;
+    padding-top: 50px;
+}
+
+div.More {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 2em;
+}
+
+div#albumThumbs {
+    padding: 1em 0;
+}
+
+div#albumThumbs ul {
+    list-style: none;
+}
+
+div#albumThumbs ul li {
+    display: block;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin: 0 2px 2px 0;
+    padding: 0;
+}
+
+ul.SmallList {
+    list-style: none;
+}
+
+ul.SmallList li {
+    position: relative;
+    padding: 0px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    float: left;
+    text-align: center;
+    width: 110px;
+    height: 180px;
+    overflow:hidden;
+}
+
+ul.SmallList li p {
+    font-size: 12px;
+    padding: 5px 0 0 0;
+    margin: 0px;
+}
+
+ul.SmallList li .ListPhoto {
+	max-height: 100px;
+    text-align: left;
+    margin: auto;
+	overflow: hidden;
+}
+
+div.SlideView {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 4;
+}
+
+div.SlideView span {
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+p.Subscribe {
+    color: #666;
+    margin: 0.5em 0 0 0;
+}
+
+.Feeds {
+    margin-top: 1.8em;
+}
+
+.Feeds img, .Feeds span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.Feeds span {
+    padding-left: 3px;
+    color: #666;
+}
+
+div.RecentList {
+    padding: 10px 25px 10px 20px;
+    width: 500px;
+}
+
+.Rate {
+    display: block;
+    width: 240px;
+    height: 120px;
+    float: left;
+    margin: 0 2px 2px 0;
+    padding: 0;
+}
+
+.BesideTitle {
+    font-size: 12px;
+    color: #cdcdcd;
+    font-weight: normal;
+}
+
+#cover_photo_img {
+    margin: 0px 5px 0px 0px
+}
+
+.photographerList td {
+    padding: 20px;
+}
+
+.photographerList img {
+    padding: 10px;
+    border: 2px solid #f3f3f3;
+}
+
+#albumDescription {
+    border-bottom: 3px solid #f3f3f3
+}
+
+.photoOverflow {
+    width: 728px;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.DayView {
+    position: relative;
+}
+
+.DayView tr {
+    vertical-align: top;
+}
+
+.DayPic {
+    text-align: center;
+	padding-top: 10px;
+}
+
+.PicDesc {
+    text-align: left;
+	width: 100px;
+	word-break:break-all;
+}
+
+.PicDesc input{
+    height: 23px;
+    border: #cccccc 1px solid;
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.PicDesc textarea{
+	width: 100%;
+    height: 100px;
+	margin-bottom: 5px;
+}
+
+.PicDesc h3 {
+    color: #333333;
+    margin-top: 10px;
+    width: 160px;
+    display: block;
+    overflow: hidden;
+	padding: 10px;
+	margin-left: 5px;
+}
+
+.PicFrom {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.PicFrom .strong {
+    font-size: 1.2em;
+}
+
+.PicFrom img {
+    margin-right: 5px;
+}
+
+.CommentList {
+    border-bottom: 1px solid #f3f3f3;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style: none
+}
+
+.rate_vote {
+    text-align: center
+}
+
+.album_list {
+    background: rgb( 243, 243, 243 );
+}
+
+.new_Set {
+    width: 130px;
+    text-align: center;
+    margin: 35px 0 0 45px !important;
+    margin-left: 25px;
+}
+
+.new_Set h4 {
+    width: 120px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: -15px !important;
+    margin-left: 0;
+}
+
+.new_Set p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #777;
+    margin-left: -38px !important;
+    margin-left: 0;
+}
+
+.sets {
+    margin: 15px;
+}
+
+.sets h4 {
+    width: 120px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sets p {
+    text-indent: 12px;
+}
+
+#dropdown-viewstyle {
+    margin-top: 0 !important;
+    margin-top: -5px;
+}
+
+#dropdown-viewstyle ul {
+    list-style: none;
+    padding: 5px;
+    background: white;
+    border: #ccc solid 1px;
+    width: 60px;
+    text-align: left;
+}
+
+#dropdown-viewstyle ul li {
+    list-style-type: none;
+}
+
+#dropdown-viewstyle ul li a {
+    padding: 2px 6px;
+}
+
+#dropdown-viewstyle ul li a:hover, #dropdown-viewstyle ul li a:focus, #dropdown-viewstyle ul li a:active {
+    background: #f5f5f5;
+}
+
+#adescription {
+    margin: 2px 5px;
+    width: 520px;
+    float: left;
+    clear: left;
+}
+
+input.blast2 {
+    width: 260px;
+    margin-bottom: 6px;
+}
+
+textarea.larger-title-editor {
+    width: 260px;
+    margin: 6px 1px;
+}

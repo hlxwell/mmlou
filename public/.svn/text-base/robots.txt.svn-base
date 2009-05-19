@@ -1,0 +1,11 @@
+#
+# robots.txt for ippmm.com
+#
+
+User-agent: *
+
+Disallow: /uploads/
+Disallow: /packs/
+Disallow: /images/
+Disallow: /stylesheets/
+Disallow: /javascripts/

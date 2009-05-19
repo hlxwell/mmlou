@@ -1,0 +1,43 @@
+
+/**** Tags Start Here ****/
+.TagsClouds {
+    margin-top:5px;
+    padding:10px;
+    background-color: #F0FAE3;
+}
+
+.TagsClouds a:link, .TagsClouds a:visited {
+    border-bottom: 0;
+    color: #6b9f1f;
+    outline-style: none;
+    text-decoration: none;
+}
+
+.TagsClouds a:hover, .TagsClouds a:active, .TagsClouds a:focus {
+    border-bottom: 0;
+    background-color: #6b9f1f;
+    color: #ffffff;
+}
+
+.TagsClouds a.huge {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.TagsClouds a.big {
+    font-size: 16px;
+}
+
+.TagsClouds a.middle {
+    font-size: 14px;
+}
+
+.TagsClouds a.small {
+    font-size: 12px;
+}
+
+.TagsClouds .num{
+	font-family:Georgia;
+	font-size: 10px;
+	color: #000000;	
+}

@@ -1,0 +1,147 @@
+<% 
+if not isHost then
+	cache "/#{getBrowserLanguage()}/user/#{params[:user_id]}/userHeaderMenu_#{@currentMenu}" do 
+%>
+<!-- 菜单 -->
+<div id="headTitle">
+<div id="uhead">
+  <img class="BuddyIcon" src="<%=getPortraitImageUrl(@user) %>" alt="<%=@user.username %>" width="48" height="48"/>
+</div>
+  <h1>
+    <span id="floorNum">
+    	<%=l("userIndex_label_floorNum",@user.id) %>
+     	<div id="floorCreateDatetime"><%=l("userIndex_label_registerDatetime")%> <%=@user.registerDatetime.strftime("%Y-%m-%d")%></div>
+    </span>
+    <%= link_to l("userIndex_link_title",@user.username),:controller => "user", :action => "index", :user_id => @user.id %>
+    <div id="addToFriend">
+    	<%=link_to_remote( l("userIndex_link_addToFriend"),:loading=>"showLoading()",:complete=>"hideLoadingAndAlert(request.responseText);$('addToFriend').style.display='none';", :url => { :controller=>"friend",:action => "add",:friend_id => @user.id } ) if not isHost and not isFriend %>
+	</div>
+	<span class="BesideTitle">
+       <%=l("userIndex_label_totalPhotoNum",@user.allAuthPhotoNum) %>
+       <%=l("userIndex_label_totalAlbumNum",@user.allAlbumNum) %>			
+       <%=l("userIndex_label_homePV",@user.viewCount) %>
+    </span>
+    <span class="UnderTitle">
+      <% if @currentMenu=="home" %>
+        <span><%=l("userMenu_link_home")%></span>  -  
+      <% else %>
+          <%= link_to l("userMenu_link_home"), :controller => "user", :action => "index", :user_id => @user.id  %> -  
+      <% end %>
+              
+      <% if @currentMenu=="album" %>
+        <span><%=l("userMenu_link_albums")%></span>  -  
+      <% else %>
+        <a href="/<%=@user.id %>/album/list/"><%=l("userMenu_link_albums")%></a>  -  
+      <% end %>
+      
+      <% if @currentMenu=="photo" %>
+        <span><%=l("userMenu_link_photos")%></span>  -  
+      <% else %>
+        <a href="/<%=@user.id %>/photo/list/"><%=l("userMenu_link_photos")%></a>  -  
+      <% end %>
+      
+      <% if @currentMenu=="comment" %>
+        <span><%=l("userMenu_link_comments")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/comment/list/"><%=l("userMenu_link_comments")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="favorite" %>
+        <span><%=l("userMenu_link_favorites")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/favorite/list/"><%=l("userMenu_link_favorites")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="popular" %>
+        <span><%=l("userMenu_link_popular")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/popular/photo/"><%=l("userMenu_link_popular")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="friends" %>
+        <span><%=l("userMenu_link_friends")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/friend/list/"><%=l("userMenu_link_friends")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="profile" %>
+        <span><%=l("userMenu_link_profile")%></span>
+      <% else %>
+        <a href="/<%=@user.id %>/user/profile/"><%=l("userMenu_link_profile")%></a>
+      <% end %>
+    </span>	
+  </h1>	
+</div>
+	<% end %>
+<% else %>
+<!-- 菜单 -->
+<div id="headTitle">
+<div id="uhead">
+  <img class="BuddyIcon" src="<%=getPortraitImageUrl(@user) %>" alt="<%=@user.username %>" width="48" height="48"/>
+</div>
+  <h1>
+    <span id="floorNum">
+    	<%=l("userIndex_label_floorNum",@user.id) %>
+     	<div id="floorCreateDatetime"><%=l("userIndex_label_registerDatetime")%> <%=@user.registerDatetime.strftime("%Y-%m-%d")%></div>
+    </span>
+    <%= link_to l("userIndex_link_title",@user.username),:controller => "user", :action => "index", :user_id => @user.id %>
+    <div id="addToFriend">
+    	<%=link_to_remote( l("userIndex_link_addToFriend"),:loading=>"showLoading()",:complete=>"hideLoadingAndAlert(request.responseText);$('addToFriend').style.display='none';", :url => { :controller=>"friend",:action => "add",:friend_id => @user.id } ) if not isHost and not isFriend %>
+	</div>
+	<span class="BesideTitle">
+       <%=l("userIndex_label_totalPhotoNum",@user.allPhotoNum) %>
+       <%=l("userIndex_label_totalAlbumNum",@user.allAlbumNum) %>			
+       <%=l("userIndex_label_homePV",@user.viewCount) %>
+    </span>
+    <span class="UnderTitle">
+      <% if @currentMenu=="home" %>
+        <span><%=l("userMenu_link_home")%></span>  -  
+      <% else %>
+          <%= link_to l("userMenu_link_home"), :controller => "user", :action => "index", :user_id => @user.id  %> -  
+      <% end %>
+              
+      <% if @currentMenu=="album" %>
+        <span><%=l("userMenu_link_albums")%></span>  -  
+      <% else %>
+        <a href="/<%=@user.id %>/album/list/"><%=l("userMenu_link_albums")%></a>  -  
+      <% end %>
+      
+      <% if @currentMenu=="photo" %>
+        <span><%=l("userMenu_link_photos")%></span>  -  
+      <% else %>
+        <a href="/<%=@user.id %>/photo/list/"><%=l("userMenu_link_photos")%></a>  -  
+      <% end %>
+      
+      <% if @currentMenu=="comment" %>
+        <span><%=l("userMenu_link_comments")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/comment/list/"><%=l("userMenu_link_comments")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="favorite" %>
+        <span><%=l("userMenu_link_favorites")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/favorite/list/"><%=l("userMenu_link_favorites")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="popular" %>
+        <span><%=l("userMenu_link_popular")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/popular/photo/"><%=l("userMenu_link_popular")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="friends" %>
+        <span><%=l("userMenu_link_friends")%></span> - 
+      <% else %>
+        <a href="/<%=@user.id %>/friend/list/"><%=l("userMenu_link_friends")%></a> - 
+      <% end %>
+      
+      <% if @currentMenu=="profile" %>
+        <span><%=l("userMenu_link_profile")%></span>
+      <% else %>
+        <a href="/<%=@user.id %>/user/profile/"><%=l("userMenu_link_profile")%></a>
+      <% end %>
+    </span>	
+  </h1>	
+</div>
+<% end %>

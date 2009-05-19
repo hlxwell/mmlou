@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/15/mmlou/trunk/test/functional
+END
+tag_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/15/mmlou/trunk/test/functional/tag_controller_test.rb
+END
+user_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/15/mmlou/trunk/test/functional/user_controller_test.rb
+END
+favorite_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/15/mmlou/trunk/test/functional/favorite_controller_test.rb
+END
+popular_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/15/mmlou/trunk/test/functional/popular_controller_test.rb
+END
+albumcomment_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/15/mmlou/trunk/test/functional/albumcomment_controller_test.rb
+END
+admin_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/15/mmlou/trunk/test/functional/admin_controller_test.rb
+END
+photo_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/15/mmlou/trunk/test/functional/photo_controller_test.rb
+END
+pay_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/15/mmlou/trunk/test/functional/pay_controller_test.rb
+END
+album_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/15/mmlou/trunk/test/functional/album_controller_test.rb
+END
+comment_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/15/mmlou/trunk/test/functional/comment_controller_test.rb
+END
+cache_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/15/mmlou/trunk/test/functional/cache_controller_test.rb
+END
+search_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/15/mmlou/trunk/test/functional/search_controller_test.rb
+END
+index_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/15/mmlou/trunk/test/functional/index_controller_test.rb
+END
+friend_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/15/mmlou/trunk/test/functional/friend_controller_test.rb
+END
+about_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/15/mmlou/trunk/test/functional/about_controller_test.rb
+END

@@ -1,0 +1,77 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/ActiveRecord/Errors.html#M000038">add (ActiveRecord::Errors)</a><br />
+    <a href="classes/GLoc.html#M000003">add_localized_strings (GLoc)</a><br />
+    <a href="classes/ActionController/Filters/ClassMethods.html#M000001">autodetect_language_filter (ActionController::Filters::ClassMethods)</a><br />
+    <a href="classes/GLoc.html#M000004">backup_state (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000005">clear_strings (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000006">clear_strings_except (GLoc)</a><br />
+    <a href="classes/ActiveRecord/Errors.html#M000039">current_language (ActiveRecord::Errors)</a><br />
+    <a href="classes/ActionView/Helpers/InstanceTag.html#M000046">current_language (ActionView::Helpers::InstanceTag)</a><br />
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000041">date_select_with_gloc (ActionView::Helpers::DateHelper)</a><br />
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000042">datetime_select_with_gloc (ActionView::Helpers::DateHelper)</a><br />
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000040">distance_of_time_in_words (ActionView::Helpers::DateHelper)</a><br />
+    <a href="classes/GLoc.html#M000007">get_charset (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000008">get_config (GLoc)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000026">l (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000023">l_YesNo (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000018">l_age (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000019">l_date (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000020">l_datetime (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000034">l_has_string? (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000025">l_lang_name (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000021">l_strftime (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000022">l_time (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000027">l_without_args (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/Helpers.html#M000024">l_yesno (GLoc::Helpers)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000028">ll (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000029">ll_without_args (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc.html#M000009">load_gloc_default_localized_strings (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000010">load_localized_strings (GLoc)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000030">ltry (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000031">ltry_without_args (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000032">lwr (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000033">lwr_ (GLoc::InstanceMethods)</a><br />
+    <a href="classes/ActionView/Base.html#M000047">new (ActionView::Base)</a><br />
+    <a href="classes/GLoc.html#M000011">restore_state (GLoc)</a><br />
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000043">select_day (ActionView::Helpers::DateHelper)</a><br />
+    <a href="classes/ActionView/Base.html#M000048">select_lang (ActionView::Base)</a><br />
+    <a href="classes/ActionView/Base.html#M000049">select_lang_choices (ActionView::Base)</a><br />
+    <a href="classes/ActionView/Base.html#M000050">select_lang_tag (ActionView::Base)</a><br />
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000044">select_month (ActionView::Helpers::DateHelper)</a><br />
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000045">select_year (ActionView::Helpers::DateHelper)</a><br />
+    <a href="classes/GLoc.html#M000012">set_charset (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000013">set_config (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000014">set_kcode (GLoc)</a><br />
+    <a href="classes/GLoc/InstanceMethods.html#M000035">set_language_if_valid (GLoc::InstanceMethods)</a><br />
+    <a href="classes/GLoc.html#M000002">set_language_mode (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000015">similar_language (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000017">valid_language? (GLoc)</a><br />
+    <a href="classes/GLoc.html#M000016">valid_languages (GLoc)</a><br />
+    <a href="classes/ActiveRecord/Validations/ClassMethods.html#M000036">validates_length_of (ActiveRecord::Validations::ClassMethods)</a><br />
+    <a href="classes/ActiveRecord/Validations/ClassMethods.html#M000037">validates_size_of (ActiveRecord::Validations::ClassMethods)</a><br />
+    <a href="classes/ActionView/Base.html#M000051">yesno_radio_buttons (ActionView::Base)</a><br />
+  </div>
+</div>
+</body>
+</html>

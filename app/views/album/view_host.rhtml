@@ -1,0 +1,146 @@
+<div id="content">
+    <%=userHeaderMenu()%>
+    <div>
+        <div id="container">
+            <div id="albumPhotographerView">
+                <table width="100%" id="albumDescription">
+                    <tr>
+                        <td valign="top" width="100%">
+                            <div class="albumCoverThumb">
+                                <img src="<%=getAlbumCover(@album,0) %>" alt="<%=@album.name %>" id="cover_photo_img" border="0" class="Photo"/>
+                            </div>
+                            <div class="albumDetail">
+                                <span id="albumtitle" class="albumOwner"><%=@album.name %></span>
+                                <div class="albumstat">
+                                    ( <%=l("album_label_numOfPhotos",@album.allPhotoNum) %>/<%=l("userIndex_label_beViewed",@album.clickCount) %>
+                                    <%= link_to l("album_link_storyMode"), :controller => "album", :action => "storyView", :user_id => params[:user_id],:album_id=>params[:album_id],:page=>params[:page] %>
+                                    <%= link_to l("album_link_simpleMode"), {:controller => "album", :action => "simpleView", :user_id => params[:user_id],:album_id=>params[:album_id],:page=>params[:page]},{:target=>"_blank"} %>)
+                                    <div class="albumOperation">
+                                         <%=l("album_label_albumOperation")%>: 
+										 <% if isHost %>										 
+										 	<a href="/album/edit/<%=@album.id %>"><%=l("common_link_edit")%></a>
+										 	<%= link_to l("album_link_batchEditPhotos"), {:controller => "album", :action => "batchEditPhotos", :user_id => params[:user_id],:album_id=>params[:album_id],:page=>params[:page]} %>
+										 	<%= link_to_remote( l("common_link_delete"), :confirm=>l("album_link_confirmDelete"),:loading=>"showLoading()",:complete=>"hideLoadingAndRedirect(request.responseText,'/#{session[:user][:id]}/album/list')", :url => { :controller=>"album",:action => "delete",:id=>@album.id } ) %>
+										 <% end %>
+                                    </div>
+                                </div>
+                                <div id="adescription">
+                                    <%=@album.description %>
+                                </div>
+                            </div>
+                            <div class="clear">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <% if @photos.size > 0 %>
+                <table id="archiveDetailView">
+                    <!--列出相册中的图片--><% for j in 0..@photos.size/3 %>
+                    <tr>
+                        <% for k in 0..2 %>
+                        <td class="PhotoGrid">
+                            <%i=j*3+k %>
+                            <% if @photos[i] %>
+                            <div class="StreamView">
+                                <div id="image_normal">
+                                    <div class="Photo">
+                                        <a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id%>"><img id="photo_<%=@photos[i].id %>" src="<%=getSmallImageUrl(@photos[i])%>" alt="<%=l("album_imgAlt_clickViewDetail",@photos[i].tags) %>"/></a>
+                                    </div>
+                                    <div id="description" class="descriptionEditor">
+                                        <span id="photoDescription<%= @photos[i].id %>"><% if @photos[i].description.nil? or @photos[i].description.length<1 %>
+                                            <%=l("album_label_clickToAddDetail") %>
+                                            <% else %>
+                                            <%= @photos[i].description %>
+                                            <% end %>
+                                        </span>
+                                        <script type="text/javascript">
+                                            //<![CDATA[
+                                            new Ajax.InPlaceEditor('photoDescription<%= @photos[i].id %>', '/photo/updateDescription/<%= @photos[i].id %>', {
+                                                okText: '<%=l("common_button_save")%>',
+                                                cancelText: '<%=l("common_button_cancel")%>',
+                                                savingText: '<%=l("common_label_saving")%>',
+                                                clickToEditText: '<%=l("album_label_clickToAddDetail")%>',
+                                                submitOnBlur: true,
+                                                cols: 27,
+                                                rows: 5,
+                                                callback: function(form, value){
+                                                    return 'description=' + value
+                                                }
+                                            })
+                                            //]]>
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="setCover">
+                                    <%=link_to_remote l("album_link_setCover"),
+                                    :loading=>"showLoading()",
+                                    :complete=>"if(request.responseText=='true'){hideLoadingAndAlert('#{l("album_alert_setCoverDone")}');$('cover_photo_img').src='#{getBoxImageUrl(@photos[i])}';}else if(request.responseText=='false'){hideLoadingAndAlert('#{l("album_alert_notAuthedPhoto")}')}",
+                                    :url => {:controller=>:album,:action=>:setCover,:id=>params[:album_id], :photoID => @photos[i].id, :isAuth=>@photos[i].isAuth } %>
+                                    |
+									<%=link_to_remote l("album_link_deletePhoto"),
+                                    :loading=>"showLoading()",
+                                    :complete=>"hideLoadingAndReload(request.responseText)",
+                                    :url => {:controller=>:photo,:action=>:delete,:id=>@photos[i].id } %>
+									|
+									<% if @photos[i].private == 0 %>
+										<%=link_to_remote l("album_link_setPhotoPrivate"),
+	                                    :loading=>"showLoading()",
+	                                    :complete=>"hideLoadingAndReload(request.responseText)",
+	                                    :url => {:controller=>:photo,:action=>:setPrivate,:id=>@photos[i].id } %>
+									<% else %>
+										<%=link_to_remote l("album_link_setPhotoPublic"),
+	                                    :loading=>"showLoading()",
+	                                    :complete=>"hideLoadingAndReload(request.responseText)",
+	                                    :url => {:controller=>:photo,:action=>:setPublic,:id=>@photos[i].id } %>
+									<% end %>
+                                </div>
+                                <div class="Activity">
+                                    (<a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id %>#comment" class="plain"><strong><%=@photos[i].commentsCount %></strong><%=l("albumComment_label_commentsNum") %></a>
+                                    / <%=l("userIndex_label_beViewed",@photos[i].clickCount) %>)
+                                </div>
+                                <div class="Privacy">
+                                    <% if @photos[i].isAuth %>
+                                    <img src="/images/public.png" align="absmiddle"><%=l("userIndex_label_photoAuthed") %>
+                                    <% else %>
+                                    <img src="/images/private.png" align="absmiddle"><%=l("userIndex_label_photoUnauthed") %>
+                                    <% end %>
+                                </div>
+                                <div class="DateTime">
+                                    <%=l("userIndex_label_uploadAt") %><%=@photos[i].datetime.strftime("%Y-%m-%d %I:%M%p") %>
+                                </div>
+                            </div>
+                            <% else %>
+                            <div class="StreamView">
+                            </div>
+                            <% end %>
+                        </td>
+                        <% end %>
+                    </tr>
+                    <% end %>
+                </table>
+                <div class="clear">
+                </div>
+                <div class="pages">
+                    <%=page_links_full @photo_pages %>
+                </div>
+                <% else %>
+                <div class="Problem">
+                    <%=l("problem_label_albumNoPhotos") %>
+                </div>
+                <% end %>
+            </div>
+            <table width="100%">
+                <tr>
+                    <td valign="top" width="55%">
+                        <%=render_partial("/album/morealbum") %>
+                    </td>
+                    <td width="40%" valign="top">
+                        <%=render_partial("/albumcomment/list") %>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>

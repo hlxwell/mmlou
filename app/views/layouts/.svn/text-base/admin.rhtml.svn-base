@@ -1,0 +1,19 @@
+<%=render :partial=>"/homeHeader"%>
+<div id="content">
+    <%=adminHeaderMenu(@currentHeaderMenu) %>
+    <div id="rightWrapper">
+        <div id="container">
+            <div id="sidebar">
+                <%=adminSubMenu(@currentSubMenu)%>                
+            </div>
+            <div id="main">
+                <div id="conbox">
+                	<%= @content_for_layout %>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<%=render :partial=>"/homeFooter" %>

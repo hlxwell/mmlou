@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/lib/active_record/locking
+END
+optimistic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/lib/active_record/locking/optimistic.rb
+END
+pessimistic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/lib/active_record/locking/pessimistic.rb
+END

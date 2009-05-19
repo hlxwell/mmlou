@@ -1,0 +1,54 @@
+<% cache "/#{getBrowserLanguage()}/search/user/#{params[:id]}/page/#{params[:page]||=1}" do %>
+<div id="content">
+    <div id="headTitle">
+        <h1><%=l("searchUser_label_title") %></h1>
+    </div>
+    <div class="clear">
+    </div>
+    <%=render :partial=>"tab",:locals=>{:current=>"user"} %>
+    <div>
+        <div id="container">
+            <div id="main">
+                <div id="searchForm">
+                    <form id="photoSearchForm" name="photoSearchForm" action="/search/user/" method="get">
+                        <label>
+                            <%=l("searchUser_label_enterKeyword") %>：<input type="text" id="keyword" name="id" value="<%=params[:id]%>" class="txt"/>
+                        </label><input type="submit" value="<%= l("common_button_search") %>" class="Btn"/>
+                    </form>
+                </div>
+                <div id="searchResult">
+                    <% if @users %>
+                    <div class="Confirm">
+                        <%=l("searchUser_label_resultNum",@userSize,params[:id]) %>
+                    </div>
+                    <% end %>
+                    <div class="SearchPeopleList">
+                        <ul class="PeopleList">
+                            <% for user in @users %>
+                            <li>
+                            	<a href="/<%=user.id%>/user/index"><img class="<%='vip' if user.isVIP %>BuddyIcon" src="<%=getPortraitImageUrl(user) %>" alt="<%=user.username%>" width="48" height="48"/></a>
+								<h3 class="Top">
+									<%= link_to user.username, :controller => "user", :action => "index", :user_id => user.id %> <%=l("common_link_vipMark") if user.isVIP %>
+                                </h3>
+                                <div class="floorNum">
+                                    <b><%=l("userIndex_label_floorNum",user.id) %></b>
+                                </div>
+                                <div>
+                                    <a href="/<%=user.id%>/photo/list" class="plain"><%=l("userIndex_label_totalPhotoNum",user.allAuthPhotoNum) %></a>
+                                    / <a href="/<%=user.id%>/album/list" class="plain"><%=l("userIndex_label_totalAlbumNum",user.allAlbumNum) %></a>
+                                </div>
+                            </li>
+                            <% end %>
+                        </ul>
+                        <div class="pages">
+                            <%=page_links_full @user_pages %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<% end %>

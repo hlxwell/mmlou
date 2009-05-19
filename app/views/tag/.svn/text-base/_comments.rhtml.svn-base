@@ -1,0 +1,45 @@
+<p>
+    <%if @commentedPhotos.size > 0 %>
+    <h1><%=l("subject_label_commentTitle",params[:id]) %></h1>
+    <div id="userComments">
+        <%for commentedPhoto in @commentedPhotos %>
+        <div class="comment">
+            <!--comment Photo-->
+            <div class="commentPic">
+                <a href="/<%=commentedPhoto.user.id %>/photo/view/<%=commentedPhoto.id %>"><img src="<%=getSmallImageUrl(commentedPhoto) %>" alt="<%=commentedPhoto.tags%>"><span class="commentFloorNum"><%=l("searchComment_label_commentFloorNum",commentedPhoto.user_id) %></span></a>
+            </div>
+            <!--Comment content--><% for comment in commentedPhoto.comments %>
+            <div class="commentContent">
+                <% if not comment.commentator.nil? %>
+                <%= link_to "<img class='BuddyIcon' src='#{getPortraitImageUrl(comment.commentator)}' alt='#{comment.commentator.username}' width='48' height='48'/>", :controller => "user", :action => "index", :user_id => comment.commentator.id %>
+                <% else %>
+                <img class="BuddyIcon" src="/images/default_buddy_icon.jpg"><% end %>
+                <% if not comment.commentator.nil? %>
+                <%= link_to comment.commentator.username, :controller => "user", :action => "index", :user_id => comment.commentator.id %>
+                <% else %>
+                <%=l("common_label_userDeleted") %>
+                <% end %>
+                - <%=l("commentList_label_sayAt",comment.datetime.strftime("%Y-%m-%d %I:%M %p")) %>:
+                <br/>
+                <div class="commentText">
+                    <%=comment.content %>
+                </div>
+                <div class="commentSign">
+                    <%=comment.commentator.userinformation.sign unless comment.commentator.nil? %>
+                </div>
+            </div>
+            <% end %>
+            <div class="commentContent">
+                <div class="goCommentKey">
+                    <a href="/<%=commentedPhoto.user_id %>/photo/view/<%=commentedPhoto.id %>#comment"><%=l("searchComment_label_IWantComment") %></a>
+                </div>
+            </div>
+        </div>
+        <%end %>
+    </div>
+    <!--photos pager-->
+    <div class="pages">
+        <%=page_links_full @commentedPhoto_pages,{:name=>"commentPage"} %>
+    </div>
+    <% end %>
+</p>

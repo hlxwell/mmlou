@@ -1,0 +1,85 @@
+<!--左边边栏-->
+<div id="sidebar">
+    <!--TOP5照片-->
+    <div>
+        <div class="list-box">
+            <h2 class="Top"><span class="Theme">&raquo;</span><%=l("subject_label_photoTop5") %></h2>
+            <div class="list-content">
+                <% if @topPhotos.size > 0 %>
+                <% for photo in @topPhotos %>
+                <div>
+                    <table cellpadding=0 cellspacing=0>
+                        <tr>
+                            <td valign="top">
+                                <a href="/<%=photo.user_id %>/photo/view/<%=photo.id %>"><img class="BuddyIcon" width="75" height="75" alt="<%=photo.tags %>" src="<%=getBoxImageUrl(photo) %>"></a>
+                            </td>
+                            <td valign="top">
+                                <ul class="top5list">
+                                    <li>
+                                        <a href="/<%=photo.user_id %>/photo/view/<%=photo.id %>" target="_blank"><%=photo.tags %></a>
+                                    </li>
+                                    <li>
+                                        <%=l("common_label_clickCount") %>：<b><%=photo.clickCount %></b>
+                                        <br>
+                                        <%=l("userHome_label_commentsNum") %>：<b><%=photo.allCommentNum %></b>
+                                        <br>
+                                        From：<b><a href="/<%=photo.user_id %>/user/index" target="_blank"><%=photo.user.username %></a></b>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <% end %>
+                <% else %>
+                <span class="Problem"><%=l("subject_label_noPhotoInSubject",params[:id]) %>
+                </span>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--TOP5相册-->
+    <div>
+        <div class="list-box">
+            <h2 class="Top"><span class="Theme">&raquo;</span><%=l("subject_label_albumTop5") %></h2>
+            <div class="list-content">
+                <% if @topAlbums.size > 0 %>
+                <% for album in @topAlbums %>
+                <div>
+                    <table cellpadding=0 cellspacing=0>
+                        <tr>
+                            <td valign="top">
+                                <a href="/<%=album.user.id %>/album/view/<%=album.id %>"><img class="BuddyIcon" width="75" height="75" alt="<%=album.name %>" src="<%=getAlbumCover(album) %>"></a>
+                            </td>
+                            <td valign="top">
+                                <ul class="top5list">
+                                    <li>
+                                        <a href="/<%=album.user.id %>/album/view/<%=album.id %>" target="_blank"><%=album.name %></a>
+                                    </li>
+                                    <li>
+                                        <%=l("common_label_clickCount") %>：<b><%=album.clickCount %></b>
+                                        <br>
+                                        <%=l("userHome_label_photosNum") %>：<b><%=album.allAuthPhotoNum %></b>
+                                        <br>
+                                        <%=l("userHome_label_commentsNum") %>：<b><%=album.allCommentNum %></b>
+                                        <br>
+                                        From：<b><a href="/<%=album.user.id %>/user/index" target="_blank"><%=album.user.username %></a></b>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <% end %>
+                <% else %>
+                <span class="Problem"><%=l("subject_label_noAlbumInSubject",params[:id]) %>
+                </span>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

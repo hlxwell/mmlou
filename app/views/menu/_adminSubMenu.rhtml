@@ -1,0 +1,138 @@
+<div id="submenu">
+  <dl>
+    <dt>
+      <%=@title %>
+    </dt>
+    
+<% if @group==1 %>
+  <% if @currentMenu!="photo" %>
+        <dd>
+          <a href="/admin/photoManage">相片管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          相片管理
+        </dd>
+      <% end %>
+    
+      <% if @currentMenu!="tag" %>
+        <dd>
+          <a href="/admin/tagManage">tag管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          tag管理
+        </dd>
+      <% end %>
+<% elsif @group==2 %>
+      <% if @currentMenu!="album" %>
+        <dd>
+          <a href="/admin/albumManage">相册管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          相册管理
+        </dd>
+      <% end %>
+    
+      <% if @currentMenu!="pack" %>
+        <dd>
+          <a href="/admin/packManage">相册打包</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          相册打包
+        </dd>
+      <% end %>
+    
+      <% if @currentMenu!="mail" %>
+        <dd>
+          <a href="/admin/mailManage">美眉快报</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          美眉快报
+        </dd>
+      <% end %>
+<% elsif @group==3 %>
+      <% if @currentMenu!="user" %>
+        <dd>
+          <a href="/admin/userManage">用户管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          用户管理
+        </dd>
+      <% end %>
+	  <% if @currentMenu!="vip" %>
+        <dd>
+          <a href="/admin/vipManage">VIP管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          VIP管理
+        </dd>
+      <% end %>
+<% elsif @group==4 %>
+      <% if @currentMenu!="point" %>
+        <dd>
+          <a href="/admin/pointManage">积分管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          积分管理
+        </dd>
+      <% end %>
+    
+      <% if @currentMenu!="log" %>
+        <dd>
+          <a href="/admin/pointLog">日志管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          日志管理
+        </dd>
+      <% end %>
+<% elsif @group==5 %>
+      <% if @currentMenu!="report" %>
+        <dd>
+          <a href="/admin/reportManage">举报管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          举报管理
+        </dd>
+      <% end %>
+<% elsif @group==6 %>
+      <% if @currentMenu!="homePage" %>
+        <dd>
+          <a href="/admin/homePageManage">首页管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          首页管理
+        </dd>
+      <% end %>
+    
+      <% if @currentMenu!="userHomePage" %>
+        <dd>
+          <a href="/admin/userHomeManage">逛逛首页管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          逛逛首页管理
+        </dd>
+      <% end %>
+   
+     <% if @currentMenu!="cache" %>
+        <dd>
+          <a href="/admin/cacheManage">缓存管理</a>
+        </dd>
+      <% else %>
+        <dd class="select">
+          缓存管理
+        </dd>
+      <% end %>
+<% end %>
+  </dl>
+</div>

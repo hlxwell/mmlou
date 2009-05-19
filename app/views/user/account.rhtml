@@ -1,0 +1,37 @@
+<% if @result == true %>
+<div class="Confirm" id="successMessages">
+    <%=@alertMessage %>
+</div>
+<% elsif @result == false %>
+<div class="Problem" id="successMessages">
+    <%=@alertMessage %>
+</div>
+<% end %>
+<%= form_tag(:action => :account) %>
+<dl>
+    <dt>
+        » <%=l("userAccount_label_passwordEdit") %>
+    </dt>
+    <dd>
+        <label class="info">
+            <%=l("userAccount_label_oldPassword") %>
+        </label>
+        <%=password_field("oldUser","password",:class=>"txt",:size=>26,:maxlength=>20) %>
+    </dd>
+    <dd>
+        <label class="info">
+            <%=l("userAccount_label_newPassword") %>
+        </label>
+        <%=password_field("user","password",:class=>"txt",:size=>26,:maxlength=>20) %>
+    </dd>
+    <dd>
+        <label class="info">
+            <%=l("userAccount_label_confirmPassword") %>
+        </label>
+        <%=password_field("user","password_confirmation",:class=>"txt",:size=>26,:maxlength=>20) %>
+    </dd>
+    <dd class="submit">
+        <input id="passwordSubmit" type="submit" value="<%=l("userAccount_button_updatePassword")%>" class="Btn"/>
+    </dd>
+</dl>
+</form>

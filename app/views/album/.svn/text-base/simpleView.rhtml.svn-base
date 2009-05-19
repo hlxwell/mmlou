@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="title" content="全球最好最大最健康的美女照片发布,共享平台,是最健康的美女欣赏平台。这里有成千上万的美眉爱好者共享出他们最好的典藏,加入mmlou.com就等于加入了美女的艺术殿堂,让您欣赏各种美女风情！超级MM|admin|"/>
+        <meta name="description" content="全球最好最大最健康的美女照片发布,共享平台,是最健康的美女欣赏平台。这里有成千上万的美眉爱好者共享出他们最好的典藏,加入mmlou.com就等于加入了美女的艺术殿堂,让您欣赏各种美女风情！"/>
+        <meta name="keywords" content="美女,美女图片,免费相册,相册,照片,ppmm,plmm,ppmm,mm,mmlou,photo,照片发布,美眉,漂亮美眉,美女图集,日本女优,完全免费,超级美女,性感美女,健康美女"/>
+        <title><%=@title %>|mmLou.com|美眉楼|美女图片共享平台---全球最健康最大的美女图片共享平台</title>
+    </head>
+    <body>
+        <h1><%=@title %></h1>
+        <h3>from 美眉楼 <a href="http://mmlou.com">mmlou.com</a></h3>
+        <h5><%=@album.description %></h5>
+        <div id="albumPhotographerView">
+            <%if @photos.size > 0 %>
+            <table id="archiveDetailView">
+                <!--列出相册中的图片-->
+				<%for j in 0..@photos.size/3 %>
+                <tr>
+                    <%for k in 0..2 %>
+                    <td class="PhotoGrid" valign="top">
+                        <%i=j*3+k %><%if @photos[i] %>
+                        <div class="StreamView">
+                            <div id="image_normal">
+                                <div class="Photo">
+                                    <a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id%>"><img id="photo_<%=@photos[i].id %>" src="<%=getSmallImageUrl(@photos[i])%>" border="0" alt="点击查看 <%=@photos[i].tags%> 详情"/></a>
+                                </div>
+                                <div class="Activity">
+                                	<!--if tags exist-->
+                                         标签:
+									<%if @photos[i].tags %>
+										<%for tag in @photos[i].tags.split(/[,， ]/) %>
+											<%if tag.length > 0 %>
+											<a href="/search/photo/<%=tag%>" class="Tag"><%=tag %></a>
+		                                    <% end %>
+										<% end %>
+									<% else %>
+										无标签
+									<% end %>
+                                </div>
+                                <div id="description" class="descriptionEditor">
+                                    <%=@photos[i].description %>
+                                </div>
+                            </div>
+                        </div>
+                        <%else %>
+                        <div class="StreamView">
+                        </div>
+                        <%end %>
+                    </td>
+                    <%end %>
+                </tr>
+                <%end %>
+            </table>
+            <br>
+            <div class="pages">
+                <%=page_links_full @photo_pages %>
+            </div>
+            <%else %>
+            <div class="Problem">
+                此相册暂时没有上传照片！
+            </div>
+            <%end %>
+            <br>
+            相关相册：
+            <table cellpadding=0 cellspacing=10 width=1>
+                <tr>
+                    <%i = 0 %><%for album in @user.albums %>
+                    <td valign="top">                    
+                        <%=link_to(image_tag(getAlbumCover(album,0), :border => 0),{:controller=>:album,:action=>:view,:album_id=>album.id,:user_id=>params[:user_id]},{:class=>"setThumb",:width=>"75",:height=>"75",:border=>5,:alt=>album.name}) %>
+                        <div>
+                            <%=link_to album.name,{:controller => "album", :action => "view", :album_id => album.id ,:user_id=>params[:user_id]},{:class=>"Seta",:title=>album.name} %>
+                        </div>
+                    </td>
+                    <%break if (i+=1)>6 %><%end %>
+                </tr>
+            </table>
+            <a href="http://www.mmlou.com/search/photo"><b>更多照片</b></a>
+        </div>
+    </body>
+</html>

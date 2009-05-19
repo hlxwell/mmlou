@@ -1,0 +1,35 @@
+<% if @result == true %>
+<div class="Confirm" id="successMessages">
+    <%=@alertMessage %>
+</div>
+<% elsif @result == false %>
+<div class="Problem" id="successMessages">
+    <%=@alertMessage %>
+    <br>
+    <%= error_message_on(:user,:email) %>
+</div>
+<% end %>
+<%= form_tag(:action => :editEmail ) %>
+<dl>
+    <dt>
+        » <%=l("userEditMail_label_editMyEmail") %>
+    </dt>
+    <dd>
+        <label class="info">
+            <%=l("userEditMail_label_currentEmail") %>：
+        </label>
+        <label class="info_block">
+            <%=session[:user].email %>
+        </label>
+    </dd>
+    <dd>
+        <label class="info">
+            <%=l("userEditMail_label_newEmail") %>：
+        </label>
+        <%=text_field("user","email",:size=>26,:maxlength=>100,:class=>"txt") %>
+    </dd>
+    <dd class="submit">
+        <input id="submit" type="submit" value="<%=l("userEditMail_button_updateEmail") %>" class="Btn"/>
+    </dd>
+</dl>
+</form>

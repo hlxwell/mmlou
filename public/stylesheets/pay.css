@@ -1,0 +1,79 @@
+#payMain{
+    text-align: center;
+    width: 700px;
+    height: 700px;
+    margin-left: 130px !important;
+    margin-left: 30px;
+}
+#payTitle{
+	width:745px;
+	padding:20px;
+	font-size:14px;
+	font-weight:bolder;
+	text-align:left;
+}
+.pay{
+	width:745px;
+	border-top:#dddddd 3px solid;
+	padding:5px;
+	margin-bottom:10px;
+        float: left;
+}
+.payDesc{
+	padding:10px;
+	width:520px;
+	float: left;
+	text-align:left;
+}
+.payKey{
+	float:right;
+	margin-top:15px;
+}
+.payLogo{
+	float:left;	
+	margin-right:10px;
+}
+.payContent{
+	width:auto;
+	float:left;
+	width:520px;
+}
+#supportBank{
+	width:745px;
+	text-align:left;
+	border-top:#dddddd 3px solid;
+        float: left;
+}
+#supportBank #title{
+	font-size:14px;
+	font-weight:bolder;
+	padding:20px;
+}
+#supportBank ul{
+    list-style: none;
+}
+#supportBank li{
+	float:left;
+	text-align:center;
+	margin-right:15px;
+	margin-bottom:5px;
+}
+
+.payingPrice{
+	padding: 5px;
+	font-weight: bold;
+}
+
+.payingDesc{
+	font-size: 14px;
+	color: #666666;
+	padding: 5px;
+	border: 1px #dddddd solid;
+	margin-bottom: 10px;
+}
+#payResult{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 10px;
+	font-size: 14px;
+}

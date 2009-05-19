@@ -1,0 +1,130 @@
+<dl>
+    <dt>
+        » 首页大图管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);",:url => { :controller=>:admin, :action => :updateSliderImages} ) %>
+        <table cellspacing="10" width="100%">
+            <% for i in 1..2 %>
+            <tr>
+                <% for j in 0..4 %>
+                <td>
+                    <% photo = Photo.find(:first,:conditions=>["id = #{@sliderImages[(5*(i-1)+j)]}"]) %>
+                    <% if not photo.nil? %>
+                    	<img src="<%=getBoxImageUrl(photo)%>" alt="<%=photo.tags%>">
+					<% else %>
+                    	错误ID
+					<% end %>
+                    <input name="image<%=5*(i-1)+j %>" size="5" type="text" value="<%=@sliderImages[(5*(i-1)+j)]%>"/>
+                </td><% end %>
+            </tr><% end %>
+        </table>
+        <br>
+        <table width="96%">
+            <tr>
+                <td align="right">
+                    <%=submit_tag "立刻修改" %>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+    <dt>
+        » 最新更新相册管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);",:url => { :controller=>:admin, :action => :updateNewAlbums} ) %>
+        <table cellspacing="10" width="100%">
+            <% for i in 1..2 %>
+            <tr>
+                <% for j in 0..4 %>
+                <td>
+                    <% album = Album.find(:first,:conditions=>["id = #{@newAlbums[(5*(i-1)+j)]}"]) %>
+                    <% if not album.nil? %>
+                    <img src="<%=getAlbumCover(album)%>" alt="<%=album.name %>">
+                    <p>
+                        <%=album.name.split(//)[0..4] %>... 
+                    </p>
+                    <% else %>
+                    	错误ID
+					<% end %>
+                    <input name="newAlbum<%=5*(i-1)+j %>" size="5" type="text" value="<%=@newAlbums[(5*(i-1)+j)]%>"/>
+                </td><% end %>
+            </tr><% end %>
+        </table>
+        <br>
+        <table width="96%">
+            <tr>
+                <td align="right">
+                    <%=submit_tag "立刻修改" %>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+    <dt>
+        » 精选相册管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);",:url => { :controller=>:admin, :action => :updateGoodAlbums} ) %>
+        <table cellspacing="10" width="100%">
+            <% for i in 1..6 %>
+            <tr>
+                <% for j in 0..4 %>
+                <td>
+                    <% album = Album.find(:first,:conditions=>["id = #{@goodAlbums[(5*(i-1)+j)]}"]) %>
+                    <% if not album.nil? %>
+                    <img src="<%=getAlbumCover(album)%>" alt="<%=album.name%>">
+                    <p>
+                        <%=album.name.split(//)[0..4] %>... 
+                    </p>
+                    <% else %>
+                    	错误ID
+					<% end %>
+                    <input name="goodAlbum<%=5*(i-1)+j %>" size="5" type="text" value="<%=@goodAlbums[(5*(i-1)+j)]%>"/>
+                </td><% end %>
+            </tr><% end %>
+        </table>
+        <br>
+        <table width="96%">
+            <tr>
+                <td align="right">
+                    <%=submit_tag "立刻修改" %>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+    <dt>
+        » 明星用户管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);",:url => { :controller=>:admin, :action => :updateStarUsers} ) %>
+        <table cellspacing="10" width="100%">
+            <% for i in 1..2 %>
+            <tr>
+                <% for j in 0..5 %>
+                <td>
+                    <% user = User.find(:first,:conditions=>["id = #{@starUsers[(6*(i-1)+j)]}"]) %>
+                    <% if not user.nil? %>
+	                    <img src="<%=getPortraitImageUrl(user)%>" alt="<%=user.username%>">
+	                    <br>
+	                    <%=user.username %>
+                    <% else %>
+                    	错误ID
+					<% end %>
+                    <input name="user<%=6*(i-1)+j %>" size="5" type="text" value="<%=@starUsers[(6*(i-1)+j)]%>" />
+                </td><% end %>
+            </tr><% end %>
+        </table>
+        <br>
+        <table width="96%">
+            <tr>
+                <td align="right">
+                    <%=submit_tag "立刻修改" %>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+</dl>

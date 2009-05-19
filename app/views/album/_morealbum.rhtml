@@ -1,0 +1,30 @@
+<% cache "/#{getBrowserLanguage()}/user/#{params[:user_id]}/album/view/#{params[:album_id]}/moreAlbum" do %>
+<div id="otherAlbums">
+    <h3>&raquo; <%=l("album_label_otherAlbum",@user.username) %></h3>
+    <% i=0 %>
+    <% for album in @user.albums %>
+    <% if album.id != @album.id %>
+    <div class="Sets">
+        <div class="SetCase">
+            <%=link_to(image_tag(getAlbumCover(album,0)),{:controller=>:album,:action=>:view,:album_id=>album.id,:user_id=>params[:user_id]},{:class=>"setThumb",:width=>"75",:height=>"75",:alt=>album.name}) %>
+        </div>
+        <h4><%= link_to album.name,{:controller => "album", :action => "view", :album_id => album.id ,:user_id=>params[:user_id]},{:class=>"Seta",:title=>album.name} %>
+        </h4>
+        <p>
+            <% if isHost %>
+            <%=l("album_label_numOfPhotos",album.allPhotoNum) %>
+            <% else %>
+            <%=l("album_label_numOfPhotos",album.allAuthPhotoNum) %>
+            <% end %>
+        </p>
+    </div>
+    <% i==4 ? break : i+=1 %>
+    <% else next end %>
+    <% end %>
+    <div class="MoreSet">
+        <%=link_to l("common_link_more"),:controller=>:album,:action=>:list,:user_id=>params[:user_id] %>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<% end %>

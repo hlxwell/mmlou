@@ -1,0 +1,29 @@
+<%= form_tag(:controller=>:pay, :action => :payForVIP) %>
+<input type="hidden" name="user[id]" value="<%=session[:user].id %>"/>
+<dl>
+    <dt>
+        » <%=l("userPay_label_joinVipTitle") %>
+    </dt>
+    <dd>
+        <div class="payingDesc">
+            <% if session[:user].vipinfo and not session[:user].vipinfo.isTimeout %>
+            <%=l("common_label_VIPTimeSpan",session[:user].vipinfo.start_at.strftime("%Y-%m-%d %I:%M%p"), session[:user].vipinfo.end_at.strftime("%Y-%m-%d %I:%M%p")) %>
+            <% else %>
+                <%=l("common_label_youAreNotVIP")%>
+            <% end %>
+        </div>
+        <label class="info">
+            <%=l("userPay_label_chooseMonthToBuy") %>：<%= select("buy", "time", %w{1 6 12}) %>
+        </label>
+        <div class="payingPrice">
+            <%=l("userPay_label_vipPrice") %>
+        </div>
+        <div class="payingDesc">
+            <%=l("userPay_label_joinVipDesc") %>
+        </div>
+    </dd>
+    <dd class="submit">
+        <input id="submit" type="submit" value="<%=l("userPay_button_pay")%>" class="Btn"/>
+    </dd>
+</dl>
+</form>

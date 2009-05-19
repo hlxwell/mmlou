@@ -1,0 +1,50 @@
+		<div id="footer">
+		    <dl>
+		        <dt>
+		            <%=l(:menu_label_siteMap)%>
+		        </dt>				                
+                <dd>                
+                    <a href="/"><%=l(:menu_link_home)%></a>
+					<span class="spliter">|</span>
+                    <a href="/user/home"><%=l(:menu_link_recommend)%></a>
+                                        <span class="spliter">|</span>
+                    <a href="/search/comment"><%=l(:menu_link_comments)%></a>
+					<span class="spliter">|</span>
+                    <a href="/search/photo"><%=l(:menu_link_searchPhoto)%></a>
+					<span class="spliter">|</span>
+                    <a href="/search/album"><%=l(:menu_link_searchAlbum)%></a>
+					<span class="spliter">|</span>
+                    <a href="/search/user"><%=l(:menu_link_searchUser)%></a>
+					<span class="spliter">|</span>
+                    <a href="/search/download"><%=l(:menu_link_downloadPack)%></a>
+                </dd>
+		        <dt>
+		            <%=l(:menu_label_siteHelp)%>
+		        </dt>
+		        <dd>
+		            <a href="/about/aboutus" target="_blank"><%=l(:menu_link_aboutus)%></a>
+		            <span class="spliter">|</span>
+		            <a href="/about/contact" target="_blank"><%=l(:menu_link_contact)%></a>
+		            <span class="spliter">|</span>
+					<a href="/about/faq" target="_blank"><%=l(:menu_link_help)%></a>
+		            <span class="spliter">|</span>
+					<a href="/about/terms" target="_blank"><%=l(:menu_link_terms)%></a>
+		            <span class="spliter">|</span>
+		            <a href="/about/report/?page=<%=request.env['REQUEST_URI'] %>" id="report_abuse"><%=l(:menu_link_report)%></a>
+		        </dd>
+		    </dl>
+		    <div class="special">
+		        <a class="favorate" href="javascript:void(0)" title="add as favorate" onclick="addFavor('<%=l(:menu_label_favorateTitle)%>','http://www.mmlou.com'); return false;"><%=l(:menu_link_addFavor)%></a>
+		        <br/>
+		        <a class="setashome" href="javascript:void(0)" title="set as home" onclick="setAsHome('http://www.mmlou.com',this);return(false);"><%=l(:menu_link_setHome)%></a>
+		    </div>
+		    <div class="clear">
+		    </div>
+		    <div id="copyright">
+		        <span>(c) 2007 - 2008 <a href="http://www.mmlou.com/" class="Remove">mmlou.com</a>, 
+		        All Rights Reserved. 浙ICP 1818988 <%="Processed in #{Time.now-@start} second(s)" if @start %></span>
+		    </div>
+		</div>
+		<%=render_partial("/counter")%>
+	</body>
+</html>

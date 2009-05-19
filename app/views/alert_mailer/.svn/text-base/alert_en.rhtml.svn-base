@@ -1,0 +1,47 @@
+<div style="background-color: #7db433; padding: 12px; width:100%">
+  <table width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="font-family: tahoma, sans-serif;">
+    <!-- HEADER ROW -->
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <p style="padding:10px 0px 10px 30px">
+            <img src="http://mmlou.com/images/logoEn.gif" alt="MMLou.com - the bigest girl's photo site.">
+          </p>
+        </td>
+      </tr>
+      <!-- MAIN ROW -->
+                 
+      <tr>
+        <td width="50">&nbsp;</td>
+        <td>
+          <!-- HEADING -->
+          <h1 style="font-size: 16px; color: #345B9E; padding-bottom: 3px; border-bottom: 1px solid #cccccc; margin-bottom: 20px;">
+          MMLou Alert Mail <%=Time.now.strftime("%y-%m-%d") %></h1>
+          <!-- MAIN MESSAGE -->
+          <div style="font-size: 14px;">
+            Hello，<b><%=@user.username if @user %></b> ,your MMLou space have been visited <b><%=@user.viewCount if @user %></b> times.<br>
+            Below is the Alert Message：<br>
+            <br>	
+            <h3>
+            	<%=@content %>
+            </h3>
+            <br>
+            <a href="http://mmlou.com/user/home">More photos...</a>
+            <br>
+            <p align="right">
+              Thanks<br>
+              <br>
+              MMLou.com all staff, <a href="http://mmlou.com/">MMLou.com</a><br>
+              <%=Time.now.strftime("%Y-%m-%d %I:%M %p")%>
+            </p>
+          </div>
+        </td>
+        <td width="50">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#7db433" style="font-size: 12px; padding-top:10px; font-weight:bold;color:#ffffff" colspan="3">
+        Don't reply this mail,for this is a system mail,send from MMLou.com - China</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

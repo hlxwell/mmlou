@@ -1,0 +1,71 @@
+<!--照片评论-->
+<div id="commentMaker">
+  <h3><a name="comment"></a>&raquo; <%=l("commentList_label_IWillSaySomeThing")%></h3>
+  <div id="commentList">
+    <% for comment in @photo.comments %>			
+      <div class="Comment">
+          <% if not comment.commentator.nil? %>
+            <%= link_to "<img class='BuddyIcon' src='#{getPortraitImageUrl(comment.commentator)}' alt='#{comment.commentator.username}' width='48' height='48'/>", :controller => "user", :action => "index", :user_id => comment.commentator.id  %>
+          <% else %>
+            <img class="BuddyIcon" src="/images/default_buddy_icon.jpg">
+          <% end %>
+        <span class="PostDateTime">
+          <% if not comment.commentator.nil? %>
+            <%= link_to comment.commentator.username, :controller => "user", :action => "index", :user_id => comment.commentator.id  %>
+          <% else %>
+		  	<%=l("common_label_userDeleted")%>
+          <% end %>
+        - <%=l("commentList_label_sayAt",comment.datetime.strftime("%Y-%m-%d %I:%M %p")) %> :
+        </span>
+        <div class="PostContent">
+          <p class="CommentText"><%= h comment.content %></p>
+          <p class="sign"><%= h comment.commentator.userinformation.sign unless comment.commentator.nil? %></p>
+        </div>
+        <div class="PostEditor">
+          <% if isHost or isCurrentUser(comment.commentator) %>
+            <%=link_to_remote l("commentList_link_deleteComment"),:loading => "showLoading()",:complete=>"hideLoadingAndReload('#{l("commentList_alert_deleteDone")}')",:class=>"Remove",:confirm=>"#{l("commentList_comfirm_confirmDelete")}",:url => {:controller=>:comment,:action=>:delete,:id=>comment.id} %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <!--Send Comment Form-->
+  <%= form_remote_tag(:before=>"$('submit').disabled = true;if($('comment_content').value.length==0){alert('#{l("commentList_alert_nullCommentContent")}');$('submit').disabled = false;return false;}",
+    :loading => "showLoading()",
+    :complete=>"if(request.responseText=='unLogin'){hideLoadingAndAlert('#{l("commentList_alert_loginFirstBeforeComment")}');}else if(request.responseText=='unAuth'){hideLoadingAndAlert('#{l("commentList_alert_noCommentForUnAuthedPhoto")}');}else{hideLoadingAndReload(request.responseText);}$('submit').disabled = false;",
+    :url => { :controller=>:comment,:action => :create } ) %>
+    <input type="hidden" name="comment[user_id]" value="<%=@photo.user_id %>"/>
+    <input type="hidden" name="comment[photo_id]" value="<%=@photo.id %>"/>
+    <input type="hidden" name="isAuth" value="<%=@photo.isAuth %>"/>
+    <!--
+    <p>
+    	<ul class="oneKeyComment">
+    		<li><a href="#">Sexy</a></li>
+			<li><a href="#">Beautiful</a></li>
+			<li><a href="#">Hot</a></li>
+			<li><a href="#">Lovely</a></li>
+			<li><a href="#">Discusting</a></li>
+			<li><a href="#">Sexy</a></li>
+			<li><a href="#">Sexy</a></li>
+			<li><a href="#">Beautiful</a></li>
+			<li><a href="#">Hot</a></li>
+			<li><a href="#">Lovely</a></li>
+			<li><a href="#">Cool</a></li>
+			<li><a href="#">Cool</a></li>
+			<li><a href="#">Mature</a></li>
+			<li><a href="#">Ugly</a></li>			
+			<li><a href="#">Mature</a></li>
+			<li><a href="#">Ugly</a></li>
+			<li><a href="#">Discusting</a></li>
+			<li><a href="#">Sexy</a></li>
+    	</ul>    	
+    </p>
+    -->
+	<p>
+      <textarea id="comment_content" name="comment[content]" rows="8"></textarea>
+    </p>
+    <p>
+      <input id="submit" type="submit" class="Btn" value="<%=l("commentList_button_publishNow")%>"/>
+    </p>
+    </form>
+  </div>

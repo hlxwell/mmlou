@@ -1,0 +1,99 @@
+﻿how many functions I need,below is To do list:
+1.design all pages you need.below is the pages filename:
+	a.album/download/index.rhtml
+	b.about/ all the thing,besides report
+	//c.photo commment page
+	//d.Tag cloud design
+	e.download the big photo for photos in the album which is not opening for downloading. 
+
+skill:
+1.member = Member.find(1, :include => {:contacts => :address})
+2.learn migrate
+3.cache_sweeper :photo_sweeper,:only=>[""] is means to really exe the expire_page function by the functions in the only array.
+4.
+
+user's home page have some views listed below:
+1.user/index
+2.album/list,album/view,album/storyView
+3.photo/list,photo/view
+4.comment/list
+
+to do list
+///////////////////////2.支付宝接口
+///////////////////////4.支付交易记录
+///////////////////////8.upload size limit:每本相册的大小要限定，每张图片的大小要限定。如果是VIP则不用限定。
+///////////////////////9.举报
+10.站点帮助
+////////////////////////////////11.request.post? 优化代码
+////////////////////////////////12.alertPanel 优化
+////////////////////////////////13.生成错误页面用rescue 404 500
+14.后台 tag 管理
+15.后台 相片打包审核制度
+*16.展示导航页设计和后台管理制作
+////////////////////////////////17.VIP用户设置
+18.日志管理，比如删除，或者按日月查询
+////////////////////////////////19.支付页把腾讯通的图片加上去
+20.评论管理
+*21.cache功能
+////////////////////////////////22.上传限制空间
+/////////////////////////////////23.标签修改
+
+page to cache:
+1.index
+2.guest_home
+3.home
+
+bug report:
+////////////////////////////////////////////////1.email可以随意修改尽管报错 //@user=@session[:user] => @user=User.find(@session[:user].id) session 值被改变尽管没被更新
+////////////////////////////////////////////////2.文件下载的时候，文件名改一个
+////////////////////////////////////////////////3.大图的地址后面加上加密字串
+////////////////////////////////////////////////4.input的安全 ~ JS代码去除，只是HTML带了
+////////////////////////////////////////////////5.相册删除 pack也删除
+////////////////////////////////////////////////6.相册修改 下载所需积分，相册描述 相册标题
+////////////////////////////////////////////////7.相片tag修改
+////////////////////////////////////////////////8.修改链接用link_to //他会被map.connect改变
+////////////////////////////////////////////////9.非主人也能把对方图片或者信息删除。 //delete(session[:user].id,recordID)
+
+9555 5057 1061 1318
+Tips
+隐身图片作为广告
+噪点图作为删除了的图片
+图片表现学 mtmmt.com
+一开始采用更多的免费下载。
+
+·Improving 网站SEO 
+·Improving 缓存设计
+·Improving 图片的SEO alternate
+·权限设计：
+普通套图 view guest
+need to do: 高级套图 view member
+免费打包图 下载 member
+收费打包图 下载 member
+·空间被点击次数。viewCount
+·上传图片的时候，批处理描述
+·failed 日志分卷研究. 
+·x-sendfile的研究和应用
+·注册用户的时候用户名可以乱输入。
+·当天或者当月新注册用户的查看，用户在线列表，最近登陆的用户。
+·发送邮件系统：需要每天发送给所有会员邮件，以提示他们最新的更新，以及他们的短信提示。
+·图片评论似论坛
+·LOGO 收藏夹 双语
+·controller 里的 双语
+·英文版本开发。tip:从flickr上拉人推广，在传图时，描述可以用html.
+·相关图片或者相册
+-unnecessary --------------------------------------------------------------
+·paypal 集成
+·will_paginator
+·用户浏览相册的历史，搜藏的相册
+·分类推荐：性感，学生，可爱，美胸
+·各类排行列表：点击，评论，收藏
+·增加站内短信：很多地方需要用到短信提示。以及推广。//可以使用discuz SM系统
+·照片评论的时候，用一键评论的系统来方便大家评论。
+·Tag即为一个主题。点击Tag后，就出现相应的主题。
+-to do---------------------------------------------------------------------
+·标题性图组:就是为一个相册添加一个另外的标题，然后连接到一个相册的故事模式或者什么上去。
+·脏话屏蔽 IP屏蔽，用户输入非法字符串屏蔽，评论管理
+-doing-----------------------------------------------------------------------
+·增加我受关注的图片在我的主页栏目里：内容就是自己所有的相片和相册的点击排行。
+·站外邮箱通知系统，有新问题定时通知，将个人主页最新被评论后发短信/邮件 提示。
+·将最新评论放到首页

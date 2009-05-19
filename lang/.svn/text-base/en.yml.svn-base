@@ -1,0 +1,407 @@
+#principle of Naming: page_property_name
+
+#提示信息
+problem_label_noPhotosUploaded: No uploaded photos!
+problem_label_noAlbumsPacked: No album for downloading!
+problem_label_noComment: No comments!
+problem_label_noAlbumCreated: No album!
+problem_label_albumNoPhotos: No photos for this album！
+problem_label_noFavorites: No Favorite!
+problem_label_noFriend: No Friend!
+problem_label_noBodyAddToFavorites: No Photo to be add to other's favorite！
+problem_label_noRelatedPhoto: No Related Photo!
+problem_label_buyPointDone: Buying <b>%d</b> Points Successfully! You now have <b>%d</b> Points.<p><h1>Thanks You！</h1></p>
+problem_label_buyVIPDone: You join VIP for <b>%d</b> Month(s) Successfully! Your VIP account will expire on <b>%s</b>.<p><h1>Thanks You！</h1></p>
+
+#通用
+common_link_delete: Delete
+common_link_download: Download
+common_alert_loginDone: Login successfully！
+common_alert_registerDone: Sign up successfully！
+common_alert_deletingAlbum: There is photos in the album，delete them all？
+common_link_more: More...
+common_button_search: Search
+common_button_save: Save
+common_button_cancel: Cancel
+common_label_saving: Saving...
+common_link_edit: Edit
+common_button_set: Set
+common_label_label: Tags
+common_label_noLabel: No tag
+common_label_type: Type
+common_label_subject: Theme
+common_label_desc: Description
+common_link_prevPage: Previous
+common_link_nextPage: Next
+common_url_indexIntroImg: bg_introduceEn.gif
+common_url_logo: logoEn.gif
+common_url_logoMini: mmloulogoEn.gif
+common_label_clickCount: Views
+common_link_breakupFriend: Remove
+common_link_downloadBigPhoto: High Quality Download
+common_label_availableSpace: Available Apace
+common_label_timeout: Time Out
+common_label_normal: Normal
+common_label_notFill: Not Fill！
+common_link_vipMark: <span class='vipTitle'>VIP</span>
+common_label_joinVipAD: Join VIP Now, Only <b>$1</b> per Month.
+common_label_userDeleted: This User have been deleted
+common_label_youAreNotVIP: You are NOT VIP yet!
+common_label_VIPTimeSpan: VIP account From %s to %s.
+
+#标题和meta
+site_meta_title: MMLou is the bigest and best online beautiful girls' photo sharing website in the world. Show off photos of your favorite beautiful girls to the world.
+site_meta_description: MMLou is the bigest and best online beautiful girls' photo sharing website in the world. Show off photos of your favorite beautiful girls to the world.
+site_meta_keywords: beautiful girl,pretty girl,beautiful woman,album,photo,plmm,ppmm,mm,mmlou,photo share,chinese girl,japan girl,free,sexy girl
+site_label_title: The Bigest Photo Sharing Platform of Beautiful and Sexy Girls.
+
+#用户菜单
+userMenu_label_hello: Hello
+userMenu_link_myfloor: My Home
+userMenu_link_account: Account
+userMenu_link_upload: Upload
+userMenu_link_buyPoint: Buy Points
+userMenu_link_help: Help
+userMenu_link_logout: Logout
+userMenu_link_login: Login
+userMenu_link_signUp: Sign up
+userMenu_link_manage: Manage
+userMenu_link_logoutManage: Quit Manage
+
+#主菜单
+menu_link_home: Home
+menu_link_recommend: Recommends
+menu_link_subject: Theme
+menu_link_comments: Comments
+menu_link_searchPhoto: Photos
+menu_link_searchAlbum: Albums
+menu_link_searchUser: Users
+menu_link_downloadPack: Downloads
+menu_link_aboutus: About us
+menu_link_contact: Contact
+menu_link_help: Help
+menu_link_terms: Terms
+menu_link_report: Report bad photo
+menu_link_setHome: Set as Home
+menu_link_addFavor: Add as Favorate
+menu_label_favorateTitle: MMLou - The Bigest Photo Sharing Platform of Beautiful and Sexy Girls.
+menu_label_siteHelp: Site Help
+menu_label_siteMap: Site Map
+menu_link_police: 911
+
+#首页
+home_button_signUp: Sign Up
+home_button_tour: Tour
+home_button_login: Login
+home_label_userLogin: User Login
+home_label_username: Name
+home_label_password: Pass
+home_label_remeberPassword: Keep
+
+#登陆
+login_label_title: Welcome to login to MMLou!
+login_label_account: Username
+login_label_password: Password
+login_label_remember: Remember me, until I logout.
+login_link_forgetPassword: Forget password？
+login_button_login: Login
+login_button_signUp: Sign up
+
+#用户主页
+userIndex_label_uploadAt: Upload at 
+userIndex_label_commentsNum: <b>%s</b> Comments
+userIndex_label_beViewed: Viewed <b>%s</b> times
+userIndex_label_floorNum: The <b>%d</b>th floor
+userIndex_label_registerDatetime: Register at
+userIndex_link_title: %s's Photos
+userIndex_label_totalPhotoNum: <b>%d</b> photos
+userIndex_label_totalAlbumNum: <b>%d</b> albums
+userIndex_label_homePV: Visited <b>%d</b> times
+userIndex_label_ownedPoints: <b>%d</b> points
+userIndex_label_gainedPoints: <b>%d</b> gains
+userIndex_label_addDescription: Click to Add description！
+userIndex_label_photoAuthed: <b>Authorized</b> Photo,Visible for Other People
+userIndex_label_photoUnauthed: <b>Unauthorized</b> Photo, Unvisible for Other People
+userIndex_link_addToFriend: Add As Friend
+userIncome_label_myPoints: My Points
+userIncome_label_myGains: My Gains
+
+userAccount_label_accountManageCenter: Account Edit
+userAccount_label_passwordEdit: Edit Password
+userAccount_label_oldPassword: Old Password
+userAccount_label_newPassword: New Password
+userAccount_label_confirmPassword: Confirm Password
+userAccount_button_updatePassword: Update Password
+userPacks_label_downloadPoints: Need <b>%d</b> points
+userPacks_label_downloadCount: Downloaded <b>%d</b> times
+userPacks_label_authedPhotos: <b>%d</b> Authenticated Photos
+userPacks_link_editAlbum: Edit Album
+userPay_button_pay: Pay now
+userPay_label_failed: Failed Paying，Please <a href=/about/contact>Contact US</a>, OR, Retry paying!
+userPay_label_joinVipTitle: Join VIP
+userPay_label_joinVipDesc: After you joined VIP, you can download and view the big and high quality photos.
+userPay_label_choosePointToBuy: Choose Points you will buy
+userPay_label_chooseMonthToBuy: Choose months you will join for
+userPay_label_choosePointToBuy: Choose Which You Want to Buy
+userPay_label_pointPrice: 20 points = 1$ 100 points = $5 400 points = $15
+userPay_label_vipPrice: <h1>JUST $1 For a 1 Month VIP Account, Oh, My GOD, That's so cheap!</h1>
+userPay_label_onlinePaying: Pay Online
+userEditMail_label_editMyEmail: Edit My Email
+userEditMail_label_currentEmail: Current Your Email
+userEditMail_label_newEmail: Please enter new Email
+userEditMail_button_updateEmail: Update Email
+userUpdateInform_label_personalInform: Personal Information
+userUpdateInform_label_realname: Real Name
+userUpdateInform_label_sexBoy: Male
+userUpdateInform_label_sexGirl: Female
+userUpdateInform_label_sex: Sex
+userUpdateInform_label_birthday: Birthday
+userUpdateInform_label_hometown: Hometown
+userUpdateInform_label_sign: Sign
+userUpdateInform_button_savePersonalInform: Save
+userRegister_label_title: Welcome Join - Free Join, Get Free Photos of Beautiful Girls.
+userRegister_button_submit: Sign Up Now
+userPortraitEdit_label_title: Upload Portrait
+userPortraitEdit_label_choosePortrait: Choose the Portrait Image you want to upload
+userPortraitEdit_button_update: Update Portrait
+userHome_label_everydayPick: Everyday Recommend
+userHome_label_news: News
+userHome_label_hotTag: Hot Tags
+userHome_label_keyword: Please Keyword
+userHome_label_photosNum: Photos
+userHome_label_albumsNum: Albums
+userHome_label_commentsNum: Comments
+userHome_label_addFavorNum: People Add It To Favorite
+userHome_label_hotPhotos: Hot Albums
+userHome_label_newPhotos: Most Recent
+userHome_label_newPhotosDesc: The latest uploaded Photos.<br>PS：update everyday！
+userHome_label_goodAlbums: Popular Albums
+userHome_label_goodAlbumsDesc: This is the best albums of all.
+userHome_label_starUsers: Popular Users
+userHome_label_latestCommentPhotos: Latest Comments
+userHome_label_starUsersDesc: Uploaded most photos, Or Uploaded high quilified photos！
+userLogout_label_welcome: You've already logged out! Welcome back Next Time!
+userLogout_label_relogin: Click here to <a href="/user/login">reLogin</a>
+userLogout_label_backToHome: Or, <a href="/">Back to Home</a>.
+
+userMenu_link_home: Home
+userMenu_link_albums: Albums
+userMenu_link_photos: Photos
+userMenu_link_comments: Comments
+userMenu_link_friends: Friends
+userMenu_link_joinVip: Join VIP
+userMenu_link_favorites: Favorites
+userMenu_link_popular: Popular
+userMenu_link_profile: Profile
+
+userManageHeaderMenu_link_account: Account Manage
+userManageHeaderMenu_link_point: Points Manage
+userManageHeaderMenu_link_myPacks: Download Album Manage
+
+userManageSubMenu_link_account: Edit Account
+userManageSubMenu_link_editEmail: Edit Email
+userManageSubMenu_link_editInform: Edit Profile
+userManageSubMenu_link_uploadPortrait: Upload Portrait
+userManageSubMenu_link_pointManage: Points And Gains
+userManageSubMenu_link_onlinePay: Online Paying
+userManageSubMenu_link_myPacks: Download Albums
+userManageSubMenu_link_joinVIP: Join VIP
+
+album_label_create: Create Album
+album_label_albumName: Album Name
+album_label_albumDesc: Album Description
+album_label_downloadPoint: Need Points
+album_label_tags: Set Tags For all:(All the tags would be same.)
+album_button_createSubmit: Create and Upload Photos
+album_button_updateSubmit: Update
+album_label_editTitle: Edit Title
+album_label_otherAlbum: %s's Other Albums
+album_label_numOfPhotos: <b>%d</b> Photos
+album_imgAlt_clickViewDetail: View Detail of %s
+album_link_listMode: List Mode
+album_link_storyMode: Story Mode
+album_link_simpleMode: Simple Mode
+album_label_clickToAddDetail: Click To Add Description！
+album_link_setCover: Set this Cover
+album_link_deletePhoto: Delete
+album_link_setPhotoPrivate: Set Private
+album_link_setPhotoPublic: Set Public
+album_label_albumOperation: Operations
+album_link_batchEditPhotos: Edit All Photos
+album_link_backToAlbum: Back To This Album
+album_label_batchEditAlbumAllPhotos: Edit All Photos Of Album：<b>%s</b>
+
+album_alert_setCoverDone: Cover Set Successfully！
+album_alert_notAuthedPhoto: This Unauthorized photo can not be cover!
+album_link_confirmDelete: Are you sure Delete this Album？
+
+albumComment_label_title: Album Comment
+albumComment_label_commentsNum: Comments
+albumComment_link_deleteComment: Delete
+albumComment_label_deleteConfirm: Are you sure Delete this Comment?
+albumComment_label_deleteDone: Comment Delete Successfully！
+albumComment_label_addCommentTitle: Add Comment
+albumComment_button_addCommentSubmit: Comment Now
+albumComment_alert_noContent: Comment Content is Necessary！
+albumComment_alert_noLogin: Login before Comment，Please Login first!
+
+photo_label_uploadTitle: Upload Photos! - Choose the photos to upload
+photo_label_howToUpload: How to upload
+photo_label_batchEditUploaded: Edit Uploaded Photos
+photo_label_description: Description
+photo_label_tags: Tags
+photo_link_editTags: Edit Tags
+photo_label_tagsEditHint: PS：Split tags by <b>Comma</b> OR <b>Space</b>.
+photo_label_noRelatedPhotos: No Related Albums.
+photo_label_relatedPhotos: Related Albums
+photo_label_batchDesc: Add Tags And Descriptions for the photos you just uploaded.
+photo_label_commonTags: You can give the common <b>Tags</b>.
+photo_label_commonDesc: You can give the common <b>Description</b>.
+photo_link_backToHome: Back to Home
+photo_link_prevPhoto: Previous
+photo_link_nextPhoto: Next
+photo_link_currentPhoto: Current
+photo_label_alreadyFirst: Already First
+photo_label_alreadyLast: Already Last
+photo_label_belongAlbum: Belongs Album
+photo_label_originalSize: Original Size
+photo_label_otherInfo: Other Information
+photo_label_beViewed: Viewed <b>%d</b> times
+photo_label_fileSize: File Size
+photo_link_addToFavor: Add As Favorite
+
+commentList_label_IWillSaySomeThing: Say Something
+commentList_link_deleteComment: Delete
+commentList_alert_deleteDone: Comment Successfully Deleted!
+commentList_comfirm_confirmDelete: Are you sure to delete this Comment?
+commentList_label_sayAt: Say at <span class=datetime> %s </span>
+commentList_button_publishNow: Comment Now
+commentList_alert_nullCommentContent: Enter Comment Content！
+commentList_alert_loginFirstBeforeComment: Login before Comment，Please Login first！
+commentList_alert_noCommentForUnAuthedPhoto: No comment for Unauthori
+
+searchComment_label_title: Hot Or Not
+searchComment_label_commentFloorNum: The %dth floor's Photo
+searchComment_label_IWantComment: I want comment It
+
+searchUser_label_title: Search User
+searchUser_label_enterKeyword: Enter Keywords
+searchUser_label_resultNum: <b>%d</b> Users For keyword <span class="Theme">“%s”</span>.
+
+searchPhoto_label_title: Search Photo
+searchPhoto_label_resultNum: <b>%d</b> Photos For tags <span class="Theme">“%s”</span>.
+
+searchAlbum_label_title: Search Album
+searchAlbum_label_resultNum: <b>%d</b> Albums For tags <span class="Theme">“%s”</span>.
+
+searchDownload_label_title: Picked Albums Pack For Downloading
+searchDownload_label_resultNum: <span class="Theme">%d</span> Albums For Downloading.
+
+search_label_photo: Photo
+search_label_album: Album
+search_label_user: MMLou User
+
+report_label_title: Report
+report_button_submit: Submit This Report
+
+register_label_username: Username
+register_label_usernameRule: (Only english characters and numbers.)
+register_label_email: Email
+register_label_emailRule: (Please enter the right Email!)
+register_label_password: Password
+register_label_passwordRule: (Minimum 6 characters, Maximum 20 characters.)
+register_label_passwordConfirm: Confirm Password
+register_button_submit: Sign Up Now!
+register_link_tour: Just Tour
+
+subject_label_noPhotoInSubject: NO Photo of %s!
+subject_label_noAlbumInSubject: NO Album of %s!
+subject_label_photoTop5: Theme Photo TOP5
+subject_label_albumTop5: Theme Album TOP5
+subject_label_hotTagTitle: Popular Theme
+subject_label_subjectTitle: MMLou Theme 
+subject_label_commentTitle: Comments of %s
+
+popular_label_photoDesc: This is a view of your most popular photos, ordered by the most views.
+popular_label_albumDesc: This is a view of your most popular albums, ordered by the most views.
+popular_label_mostCommentDesc: This is a view of the photos which most commented, ordered by the most comments.
+popular_label_mostFavoriteDesc: This is a view of the photos which most favorited by other people, ordered by the most favorites.
+popular_link_photo: Popular Photos
+popular_link_album: Popular Albums
+popular_link_favor: Most Favorites
+popular_link_comment: Most Commented
+
+
+constValue_CreateAlbum: Create Album
+constValue_photoSearchResult: Photo Search Result
+constValue_albumSearchResult: Album Search Result
+constValue_userSearchResult: User Search Result
+constValue_loginFailed: Login Failed！Username or Password Error！
+constValue_registerDone: Congratulations，Sign Up Successfully！
+constValue_registerFailed: Sign Up Failed！
+constValue_userInformEditDone: User Information Update Successfully！
+constValue_userInformEditFailed: User Information Update Failed, Below is the reason：
+constValue_signTooLong: Sign's maximum length is 100！
+constValue_emailEditDone: Email Update Successfully！
+constValue_emailEditFailed: Email Update Failed,Below is the reason：<br>
+constValue_portrait_selectOne: Please Choose a Image file！
+constValue_portrait_selectRightFormat: Please Choose a right Image file！such as .jpg or .gif。
+constValue_portrait_tooLarge: Image File cannot larger than 200K！
+constValue_portrait_uploadDone: Portrait Upload Successfully！
+constValue_portrait_uploadFailed: Portrait Upload Failed！
+constValue_password_wrongOldPassword: Originnal Password Not Match！
+constValue_password_enterNewPassword: Please Enter The New Password！
+constValue_password_lengthRange: Length of New Password should between 6 - 35！
+constValue_password_differentForConfirm: Confirm Password is different from the New Password！
+constValue_password_editDone: Password Update Successfully！
+
+ajaxReply_albumEditDone: Album Update Successfully！
+ajaxReply_albumEditFailed: Album Update Failed，Reasons Below：
+ajaxReply_albumCreateDone: Album Created Successfully！
+ajaxReply_albumCreateFailed: Album Create Failed！
+ajaxReply_albumDeleteDone: Album Delete Successfully！
+ajaxReply_albumDeleteFailed: Album Delete Failed！
+ajaxReply_noEnoughPoints: Sorry, You are NOT VIP user, It's only <b>$1/Month</b> for now.<br> So You <a href=/user/joinVip>join VIP</a> Right now！
+ajaxReply_commentDone: Comment Successfully！
+ajaxReply_commentFailed: Comment Failed！
+ajaxReply_commentDeleteDone: Comment Delete Successfully！
+ajaxReply_commentDeleteFailed: Comment Delete Failed！
+ajaxReply_photoDeleteDone: Photo Deleted Successfully！
+ajaxReply_photoDeleteFailed: Photo Delete Failed！
+ajaxReply_tagsUpdateDone: Update Tags Successfully！
+ajaxReply_photoBatchEditDone: Update Successfully！
+ajaxReply_photoBatchEditFailed: Failed Update，Try Later！
+ajaxReply_setDone: Set Successfully！
+ajaxReply_setFailed: Set Failed！
+ajaxReply_addToFavoriteDone: Add To Favorite Successfully！
+ajaxReply_addToFavoriteFailed: Add To Favorite Failed！
+ajaxReply_favoriteDeleteDone: Delete Favorite Successfully！
+ajaxReply_favoriteDeleteFailed: Delete Favorite Failed！
+ajaxReply_addToFriendDone: Add As Friend Successfully!
+ajaxReply_addToFriendFailed: Add As Friend Failed!
+ajaxReply_deleteFriendDone: Delete Friend Successfully!
+ajaxReply_deleteFriendFailed: Delete Friend Failed!
+ajaxReply_loginFirst: Login First!
+ajaxReply_privatePhotoLoginFirst: Sorry，this is a Private photo,Please login first！
+ajaxReply_unauthedPhotoCannotAddToFavor: Sorry,This Photo cannot be Add to favorites!
+
+validate_enterAlbumName: Please Enter Album Name！
+validate_albumDownloadPoint: Download Point should be the multiples of 5, and minimum of 5 points, maximum of 30 points！
+validate_requireNumber: Download Point Should be a Number！
+validate_enterCommentContent: Please Enter Comment Content！
+validate_requireAlbumID: Album ID is Required！
+validate_existInFavorite: Already in Favorites!
+validate_alreadyBeFriend: Already is Friend！
+validate_vipExist: VIP User Already Exist!
+validate_tagExist: Tag Already Exist！
+validate_enterTagCover: Tag Cover is Required！
+validate_enterUsername: User Name is Required！
+validate_badWordInUsername: Illegal word in the User Name！
+validate_usernameExist: User Name Already Exist！
+validate_wrongEmailFormat: Wrong Email Format！
+validate_sameEmailExist: Same Email Already Exist！
+validate_enterEmail: Please Enter Email！
+validate_differentConfirmPassword: Confirm Passsword is different from previous password！
+validate_enterPassword: Password is Required！
+validate_passwordTooShort: Password should be longer than 6 characters!
+validate_passwordTooLong: Password should be shorter than 35 characters!

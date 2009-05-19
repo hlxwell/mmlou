@@ -1,0 +1,44 @@
+<dl>
+    <dt>
+        » 用户积分管理
+    </dt>
+    <dd>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    用户名
+                </td>
+                <td>
+                    email
+                </td>
+                <td>
+                    积分
+                </td>
+                <td>
+                </td>
+            </tr>
+            <% for user in @users %>
+            <tr>
+                <td>
+                    <%=user.username %>
+                </td>
+                <td>
+                    <%=user.email %>
+                </td>
+                <td id="user_<%=user.id%>">
+                    <%=user.point %>
+                </td>
+                <td>
+                    <%=link_to_remote( "加5分",:complete=>"alert('加分成功！');location.reload();", :url => { :action => "addPoint",:id=>user.id } ) %>
+                    | <%=link_to_remote( "扣5分",:complete=>"alert('扣分成功！');location.reload();", :url => { :action => "minusPoint",:id=>user.id } ) %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </dd>
+    <dd>
+        <div class="pages">
+            <%=page_links_full @user_pages %>
+        </div>
+    </dd>
+</dl>

@@ -1,0 +1,61 @@
+<dl>
+    <dt>
+        » 打包管理
+    </dt>
+    <dd>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    相册名
+                </td>
+                <td>
+                    所属用户
+                </td>
+                <td>
+                    发布时间
+                </td>
+                <td>
+                    认证照片/总照片数
+                </td>
+                <td width="100">
+                </td>
+            </tr>
+            <%for album in @albums %>
+            <tr>
+                <td>
+                    <a href="/<%=album.user.id %>/album/view/<%=album.id %>" target="_blank"><%=album.name %></a>
+                </td>
+                <td>
+                    <%= link_to album.user.username, {:controller => "user", :action => "index", :user_id => album.user.id},{:target=>"_blank"} %>
+                </td>
+                <td>
+                    <%=album.datetime.strftime("%m-%d %I:%M%p") %>
+                </td>
+                <td>
+                    <%=album.allAuthPhotoNum %>/ <%=album.allPhotoNum %>
+                </td>
+                <td>
+                    <% if album.allAuthPhotoNum==0 %>
+                    没相片打包<% elsif album.isPacked==true %>
+                    <%=link_to_remote( "删除大图包",:confirm=>"删除包可能需要一些时间，是否开始？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "unpackingAlbum",:id=>album.id } ) %>
+                    <% else %>
+                    <%=link_to_remote( "打大图包",:confirm=>"打包可能需要一些时间，是否开始？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "packingAlbum",:id=>album.id } ) %>
+                    <% end %>
+                    <br>
+                    <% if album.allAuthPhotoNum==0 %>
+                    <% elsif album.isMiddlePacked==true %>
+                    <%=link_to_remote( "删除中图包",:confirm=>"删除包可能需要一些时间，是否开始？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "unpackingMiddleAlbum",:id=>album.id } ) %>
+                    <br>
+                    <a href="/packs/<%=album.middlePackName %>">下载中图包</a>
+                    <% elsif album.isMiddlePacked==false %>
+                    <%=link_to_remote( "打中图包",:confirm=>"打包可能需要一些时间，是否开始？",:loading=>"showLoading()",:complete=>"hideLoadingAndReload(request.responseText);", :url => { :action => "packingMiddleAlbum",:id=>album.id } ) %>
+                    <% end %>
+                </td>
+            </tr>
+            <%end %>
+        </table>
+    </dd>
+</dl>
+<div class="pages">
+    <%=page_links_full @album_pages %>
+</div>

@@ -1,0 +1,100 @@
+<div id="content">
+  <div id="heading">
+    <h1><%=l("photo_label_batchEditUploaded")%></h1>
+  </div>
+  <div class="clear">
+  </div>
+  <div>
+    <div id="container">
+      <div class="Line">
+      </div>
+      <script>
+        function setCommonTags()
+        {
+          for (i = 0; i < $$('input.txt').length; i++) {
+            $$('input.txt')[i].value = $("commonTags").value;
+          }
+        }
+        
+        function setCommonDesc()
+        {
+          for (i = 0; i < $$('textarea.desc').length; i++) {
+            $$('textarea.desc')[i].value = $("commonDesc").value;
+          }
+        }
+      </script>
+      <div class="BatchDesc">
+        <h2><b><%=l("photo_label_batchDesc")%></b></h2>
+        <br>
+        <table>
+          <tr>
+            <td align="left">
+              <%=l("photo_label_commonTags")%>： <br>
+              <input id="commonTags" type="text" class="txt" size="50">
+            </td>
+          </tr>
+          <tr>
+            <td align="right">			
+              <input type="button" value="<%=l("common_button_set")%>" onclick="setCommonTags()">
+            </td>
+          </tr>
+          <tr>
+            <td align="left">
+              <%=l("photo_label_commonDesc")%>： <br>
+              <textarea id="commonDesc" cols="39" rows="5"></textarea>							
+            </td>
+          </tr>
+          <tr>
+            <td align="right">							
+              <input type="button" value="<%=l("common_button_set")%>" onclick="setCommonDesc()">
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      <!-- the form -->
+      <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndRedirect(request.responseText, '/#{session[:user][:id]}/user/index');",:url=>{:controller => "photo", :action => "batchEdit",:sessionName=>params[:sessionName]}) %>
+      <table cellspacing="0" class="BatchList">
+        <% i=0 %>
+        <%for photo in @photos %>
+          <tr>
+            <td class="BatchPic">
+            <img src="<%=getSmallImageUrl(photo) %>" class="Photo" alt="<%=photo.tags%>">
+                 </td>
+            <td>
+              <table class="BatchForm">
+                <tr>
+                  <td class="Label">
+                    <%=l("photo_label_description")%>:
+                  </td>
+                  <td>
+                    <textarea name="<%=photo.filename %>[description]" cols="38" rows="5" class="desc"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="Label">
+                    <%=l("photo_label_tags")%>:
+                  </td>
+                  <td>
+                  <input name="<%=photo.filename %>[tags]" type="text" size="40" class="txt"/>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <% i+=1 %>
+        <% end %>
+      </table>
+      <p align="center">
+        <input type="submit" name="Submit" value="<%=l("common_button_save")%>" class="Btn"/>
+      </p>
+      <p align="center">
+        <%= link_to l("photo_link_backToHome"), :controller => "user", :action => "index", :user_id => session[:user].id %>
+      </p>
+      </form>
+      <!-- end form-->
+    </div>
+    <div class="clear">
+    </div>
+  </div>
+</div>

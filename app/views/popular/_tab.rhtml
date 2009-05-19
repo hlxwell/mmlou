@@ -1,0 +1,29 @@
+<%
+	photo=album=mostComment=mostFavorite="TabOut"
+	if current == "photo"
+		photo="TabIn"
+	elsif current == "album"
+		album="TabIn"
+	elsif current == "mostComment"
+		mostComment="TabIn"
+	elsif current == "mostFavorite"
+		mostFavorite="TabIn"
+	end
+%>
+
+<div class="Tab">
+    <ul class="Tabs">
+        <li class="<%=photo%>">
+            <a href="/<%=@user.id %>/popular/photo"><%=l("popular_link_photo")%></a>
+        </li>
+        <li class="<%=album%>">
+            <a href="/<%=@user.id %>/popular/album"><%=l("popular_link_album")%></a>
+        </li>
+        <li class="<%=mostFavorite%>">
+            <a href="/<%=@user.id %>/popular/mostFavorite"><%=l("popular_link_favor")%></a>
+        </li>
+        <li class="<%=mostComment%>">
+            <a href="/<%=@user.id %>/popular/mostComment"><%=l("popular_link_comment")%></a>
+        </li>
+    </ul>
+</div>

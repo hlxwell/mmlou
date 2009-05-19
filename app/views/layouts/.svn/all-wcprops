@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/15/mmlou/trunk/app/views/layouts
+END
+user.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/layouts/user.rhtml
+END
+index.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/app/views/layouts/index.rhtml
+END
+admin.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/app/views/layouts/admin.rhtml
+END
+home.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/layouts/home.rhtml
+END

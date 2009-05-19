@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/15/mmlou/trunk/app/views/album
+END
+view.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/app/views/album/view.rhtml
+END
+list.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/app/views/album/list.rhtml
+END
+storyView.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/15/mmlou/trunk/app/views/album/storyView.rhtml
+END
+_morealbum.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/15/mmlou/trunk/app/views/album/_morealbum.rhtml
+END
+create.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/album/create.rhtml
+END
+batchEditPhotos.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/15/mmlou/trunk/app/views/album/batchEditPhotos.rhtml
+END
+simpleView.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/15/mmlou/trunk/app/views/album/simpleView.rhtml
+END
+edit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/app/views/album/edit.rhtml
+END
+download.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/15/mmlou/trunk/app/views/album/download.rhtml
+END
+view_host.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/15/mmlou/trunk/app/views/album/view_host.rhtml
+END
+list_host.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/15/mmlou/trunk/app/views/album/list_host.rhtml
+END
+storyView_host.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/15/mmlou/trunk/app/views/album/storyView_host.rhtml
+END

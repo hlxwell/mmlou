@@ -1,0 +1,112 @@
+<dl>
+    <dt>
+        » 相片管理
+    </dt>
+    <dd>
+        <%= form_remote_tag(:loading=>"showLoading()",:complete=>"hideLoadingAndAlert(request.responseText);",:url => { :controller=>:admin, :action => :authPhotos, :photoIDs=>@photoIDs} ) %>
+        <table width="100%" cellspacing="5">
+            <tr>
+                <td>
+                    所属相册
+                </td>
+                <td>
+                    文件名
+                </td>
+                <td>
+                    发布时间
+                </td>
+                <td>
+                    用户名
+                </td>
+                <td>
+                    宽
+                </td>
+                <td>
+                    高
+                </td>
+                <td>
+                    是否认证
+                </td>
+                <td>
+                </td>
+            </tr>
+            <%for photo in @photos %>
+            <tr>
+                <td>
+                    <a href="/<%=photo.user_id %>/album/view/<%=photo.album.id %>" target="_blank"><%=photo.album.name %></a>
+                </td>
+                <td>
+                    <a href="/<%=photo.user_id %>/photo/view/<%=photo.id %>" target="_blank"><img src="<%=getThumbImageUrl(photo) %>" alt="<%=photo.tags%>"></a>
+                </td>
+                <td>
+                    <%=photo.datetime.strftime("%m-%d %I:%M%p") %>
+                </td>
+                <td>
+                    <%=photo.user.username %>
+                </td>
+                <td>
+                    <%=photo.width %>
+                </td>
+                <td>
+                    <%=photo.height %>
+                </td>
+                <td>
+                    <input type="checkbox" name="<%=photo.id %>"<%="checked" if photo.isAuth %> value="<%=photo.isAuth %>">
+                </td>
+                <td>
+                    <%=link_to_remote( "删除",:confirm=>"是否删除？",:complete=>"alert('删除成功！');location.reload();", :url => { :action => "deletePhoto",:id=>photo.id } ) %>
+                </td>
+            </tr>
+            <% end %>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td colspan="3">
+                    <a href="javascript:checkReverse()">反选</a>
+                    - <a href="javascript:checkAll()">全选</a>
+                    - <a href="javascript:uncheckAll()">全不选</a>
+                </td>
+                <td>
+                    <input type="submit" value="认证">
+                </td>
+            </tr>
+        </table>
+        </form>
+    </dd>
+    <dd>
+        <div class="pages">
+            <%=page_links_full @photo_pages %>
+        </div>
+    </dd>
+</dl>
+<script language="javascript">
+    function checkReverse(){
+        var checkboxs = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxs.length; i++) {
+            if (checkboxs[i].type == "checkbox") 
+                checkboxs[i].checked = !checkboxs[i].checked;
+        }
+    }
+    
+    function checkAll(){
+        var checkboxs = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxs.length; i++) {
+            if (checkboxs[i].type == "checkbox") 
+                checkboxs[i].checked = true;
+        }
+    }
+    
+    function uncheckAll(){
+        var checkboxs = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxs.length; i++) {
+            if (checkboxs[i].type == "checkbox") 
+                checkboxs[i].checked = false;
+        }
+    }
+</script>

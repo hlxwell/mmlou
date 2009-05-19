@@ -1,0 +1,7 @@
+<% cache "/#{getBrowserLanguage()}/subjectTags" do %>
+<div id="tags" class="TagsClouds">
+	<% for tag in Tag.all %>
+    	<span><a href="/tag/subject/<%=tag.tagName %>" onmouseover='Tip("<%= getTagCoverUrl(tag) %>")' class="<%=getTagSizeByPhotoNum(tag.referedPhotos)%>"><%=tag.tagName %></a>  </span>
+	<% end %>
+</div>
+<% end %>

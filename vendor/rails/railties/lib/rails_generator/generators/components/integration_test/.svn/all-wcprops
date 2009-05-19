@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/259/mmlou/trunk/vendor/rails/railties/lib/rails_generator/generators/components/integration_test
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/259/mmlou/trunk/vendor/rails/railties/lib/rails_generator/generators/components/integration_test/USAGE
+END
+integration_test_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/!svn/ver/259/mmlou/trunk/vendor/rails/railties/lib/rails_generator/generators/components/integration_test/integration_test_generator.rb
+END

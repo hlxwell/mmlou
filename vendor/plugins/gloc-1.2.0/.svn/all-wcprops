@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0/init.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0/CHANGELOG
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0/MIT-LICENSE
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0/readme
+END
+UPGRADING_TO-1.2.txt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/15/mmlou/trunk/vendor/plugins/gloc-1.2.0/UPGRADING_TO-1.2.txt
+END

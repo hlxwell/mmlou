@@ -1,0 +1,76 @@
+<div id="content">
+    <%=userHeaderMenu()%>    
+    <div id="container">
+        <div id="albumPhotographerView">
+            <table width="100%" id="albumDescription">
+                <tr>
+                    <td valign="top" width="100%">
+                        <div class="albumCoverThumb">
+                            <img src="<%=getAlbumCover(@album,0) %>" alt="<%=@album.name %>" id="cover_photo_img" class="Photo"/>
+                                 </div>
+                            <div class="albumDetail">
+                              <span id="albumtitle" class="albumOwner"><%=@album.name %></span>
+                            <div class="albumstat">
+                                (<%=l("album_label_numOfPhotos",@album.allPhotoNum) %> / <%=l("userIndex_label_beViewed",@album.clickCount) %>
+                                <%= link_to l("album_link_listMode"), :controller => "album", :action => "view", :user_id => params[:user_id],:album_id=>params[:album_id] %> 
+                                <%= link_to l("album_link_simpleMode"), 
+                                  {:controller => "album", 
+                                  :action => "simpleView", 
+                                  :user_id => params[:user_id],
+                                  :album_id=>params[:album_id],
+                                  :page=>params[:page]},{:target=>"_blank"} %> )
+                            </div>
+                            <div id="adescription">
+                            	<%=@album.description %>
+                            </div>
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <% if @photos.size > 0 %>
+            <table class="DayView">
+            	<% for photo in @photos %>
+                <tr valign="top">
+                    <td class="DayPic">
+                        <a href="/<%=params[:user_id] %>/photo/view/<%=photo.id %>" title="<%=photo.tags %>">
+                        <img src="<%=getMiddleImageUrl(photo) %>" alt="<%=photo.tags %>" class="Photo"/>
+						</a>
+                    </td>
+                    <td class="PicDesc">
+                        <h3 id="photo<%=photo.id %>"><% if photo.description.nil? or photo.description.length<1 %><%=l("album_label_clickToAddDetail")%><% else %><%= photo.description %><% end %></h3>
+						<script type="text/javascript">
+                            //<![CDATA[
+                            new Ajax.InPlaceEditor('photo<%=photo.id %>', '/photo/updateDescription/<%= photo.id %>', {okText:'<%=l("common_button_save")%>',cancelText:'<%=l("common_button_cancel")%>',savingText:'<%=l("common_label_saving")%>',clickToEditText:'<%=l("userIndex_label_addDescription")%>',submitOnBlur:true,cols:29,rows:10,callback: function(form, value) { return 'description=' + value}})
+                            //]]>
+                        </script>
+                    </td>
+                </tr>
+				<% end %>                
+            </table>
+            <div class="clear">
+            </div>
+            <div class="pages">
+            	<%=page_links_full @photo_pages %>
+            </div>
+            <% else %>
+              <div class="Problem">
+                 <%=l("problem_label_albumNoPhotos")%>
+              </div>
+            <% end %>
+        </div>
+        <table width="100%">
+            <tr>
+                <td valign="top" width="55%">
+                    <%=render_partial("/album/morealbum")%>
+                </td>
+                <td width="40%" valign="top">
+                    <%=render_partial("/albumcomment/list")%>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear">
+    </div>
+</div>

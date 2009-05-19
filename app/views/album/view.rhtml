@@ -1,0 +1,93 @@
+<div id="content">
+    <%=userHeaderMenu()%>
+    <div>
+    	<div id="container">
+    		<% cache "/#{getBrowserLanguage()}/user/#{params[:user_id]}/album/view/#{params[:album_id]}/page/#{params[:page]||=1}" do %>
+            <div id="albumPhotographerView">
+                <table width="100%" id="albumDescription">
+                    <tr>
+                        <td valign="top" width="100%">
+                            <div class="albumCoverThumb">
+                                <img src="<%=getAlbumCover(@album,0) %>" alt="<%=@album.name %>" id="cover_photo_img" border="0" class="Photo"/>
+                            </div>
+                            <div class="albumDetail">
+                                <span id="albumtitle" class="albumOwner"><%=@album.name %></span>
+                                <div class="albumstat">
+                                    ( <%=l("album_label_numOfPhotos",@album.allAuthPhotoNum) %>/ <%=l("userIndex_label_beViewed",@album.clickCount) %>
+                                    <%= link_to l("album_link_storyMode"), :controller => "album", :action => "storyView", :user_id => params[:user_id],:album_id=>params[:album_id] %>
+                                    <%= link_to l("album_link_simpleMode"), {:controller => "album", :action => "simpleView", :user_id => params[:user_id],:album_id=>params[:album_id],:page=>params[:page]},{:target=>"_blank"} %>)<% if @album.isPacked %>
+                                    <div class="albumOperation">
+                                        <%=l("userPacks_label_downloadPoints",@album.downloadPoint) %><a href="/<%=@album.user.id %>/album/download/<%=@album.id %>"><%=l("common_link_download") %></a>
+                                    </div>
+                                    <% end %>
+                                </div>
+                                <div id="adescription">
+                                    <%=@album.description %>
+                                </div>
+                            </div>
+                            <div class="clear">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <% if @photos.size > 0 %>
+                <table id="archiveDetailView">
+                    <!--列出相册中的图片--><% for j in 0..@photos.size/3 %>
+                    <tr>
+                        <% for k in 0..2 %>
+                        <td class="PhotoGrid">
+                            <%i=j*3+k %>
+                            <% if @photos[i] %>
+                            <div class="StreamView">
+                                <div id="image_normal">
+                                    <div class="Photo">
+                                        <a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id%>"><img id="photo_<%=@photos[i].id %>" src="<%=getSmallImageUrl(@photos[i])%>" alt="<%=l("album_imgAlt_clickViewDetail",@photos[i].tags) %>"/></a>
+                                    </div>
+                                    <div id="description" class="descriptionEditor">
+                                        <%= @photos[i].description %>
+                                    </div>
+                                </div>
+                                <div class="Activity">
+                                    (<a href="/<%=params[:user_id] %>/photo/view/<%=@photos[i].id %>#comment" class="plain"><%=l("userIndex_label_commentsNum",@photos[i].commentsCount) %></a>
+                                    / <%=l("userIndex_label_beViewed",@photos[i].clickCount) %>)
+                                </div>
+                                <div class="DateTime">
+                                    <%=l("userIndex_label_uploadAt") %><%=@photos[i].datetime.strftime("%Y-%m-%d %I:%M%p") %>
+                                </div>
+                            </div>
+                            <% else %>
+                            <div class="StreamView">
+                            </div>
+                            <% end %>
+                        </td>
+                        <% end %>
+                    </tr>
+                    <% end %>
+                </table>
+                <div class="clear">
+                </div>
+                <div class="pages">
+                    <%=page_links_full @photo_pages %>
+                </div>
+                <% else %>
+                <div class="Problem">
+                    <%=l("problem_label_albumNoPhotos") %>
+                </div>
+                <% end %>
+            </div>
+			<% end %>
+            <table width="100%">
+                <tr>
+                    <td valign="top" width="55%">
+                        <%=render_partial("/album/morealbum") %>
+                    </td>
+                    <td width="40%" valign="top">
+                        <%=render_partial("/albumcomment/list") %>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>

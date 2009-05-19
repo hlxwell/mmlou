@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/152/mmlou/trunk/app/views/user
+END
+_goodAlbums.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/15/mmlou/trunk/app/views/user/_goodAlbums.rhtml
+END
+account.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/user/account.rhtml
+END
+editEmail.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/15/mmlou/trunk/app/views/user/editEmail.rhtml
+END
+_latestAlbums.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/15/mmlou/trunk/app/views/user/_latestAlbums.rhtml
+END
+profile.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/user/profile.rhtml
+END
+index_host.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/15/mmlou/trunk/app/views/user/index_host.rhtml
+END
+_userHomeTags.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/15/mmlou/trunk/app/views/user/_userHomeTags.rhtml
+END
+_topAlbums.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/15/mmlou/trunk/app/views/user/_topAlbums.rhtml
+END
+index.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/app/views/user/index.rhtml
+END
+_starUser.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/15/mmlou/trunk/app/views/user/_starUser.rhtml
+END
+myPacks.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/user/myPacks.rhtml
+END
+login.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/app/views/user/login.rhtml
+END
+buyPoint.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/app/views/user/buyPoint.rhtml
+END
+logout.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/15/mmlou/trunk/app/views/user/logout.rhtml
+END
+income.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/15/mmlou/trunk/app/views/user/income.rhtml
+END
+portraitEdit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/15/mmlou/trunk/app/views/user/portraitEdit.rhtml
+END
+_news.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/152/mmlou/trunk/app/views/user/_news.rhtml
+END
+payNow.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/15/mmlou/trunk/app/views/user/payNow.rhtml
+END
+joinVip.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/app/views/user/joinVip.rhtml
+END
+_latestComment.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/15/mmlou/trunk/app/views/user/_latestComment.rhtml
+END
+register.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/app/views/user/register.rhtml
+END
+home.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/15/mmlou/trunk/app/views/user/home.rhtml
+END
+payResult.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/15/mmlou/trunk/app/views/user/payResult.rhtml
+END
+updateInformation.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/15/mmlou/trunk/app/views/user/updateInformation.rhtml
+END
+_albumSideBar.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/15/mmlou/trunk/app/views/user/_albumSideBar.rhtml
+END
+pay.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/15/mmlou/trunk/app/views/user/pay.rhtml
+END

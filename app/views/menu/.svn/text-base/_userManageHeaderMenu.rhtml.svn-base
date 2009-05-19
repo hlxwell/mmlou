@@ -1,0 +1,30 @@
+<div id="heading">
+  <h1><%=l("userAccount_label_accountManageCenter")%> / <span class="sub-header"><%=@title %></span></h1>
+</div>
+<div class="clear">
+</div>
+<div class="clear">
+</div>
+<div id="menu">
+  <div class="menu_btu">
+    <% if @currentMenu=="user" %>
+      <a class="select"><%=l("userManageHeaderMenu_link_account")%></a>
+    <% else %>
+      <a href="/user/account"><%=l("userManageHeaderMenu_link_account")%></a>
+    <% end %>
+    
+   <% if @currentMenu=="point" %>
+      <a class="select"><%=l("userManageHeaderMenu_link_point")%></a>
+    <% else %>
+      <a href="/user/income"><%=l("userManageHeaderMenu_link_point")%></a>
+    <% end %>
+    
+    <% if @currentMenu=="packs" %>
+      <a class="select"><%=l("userManageHeaderMenu_link_myPacks")%></a>
+    <% else %>
+      <a href="/user/myPacks"><%=l("userManageHeaderMenu_link_myPacks")%></a>
+    <% end %>
+  </div>
+</div>
+<div class="clear">
+</div>

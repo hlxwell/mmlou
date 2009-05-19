@@ -1,0 +1,35 @@
+<!--精选相册-->
+<div class="img-box">
+    <div class="box-content">
+        <!--精选相册描述-->
+        <ul class="box-info">
+            <li class="td1">
+                <%=l("userHome_label_goodAlbums") %>
+            </li>
+            <li class="td2">
+                <%=l("userHome_label_goodAlbumsDesc") %>
+            </li>
+            <li class="td3">
+                <a href="/search/album"><%=l("common_link_more") %></a>
+            </li>
+        </ul>
+        <div style="CLEAR: both">
+        </div>
+        <ul class="img-list">
+            <% for album in @goodAlbums %>
+            <li class="four-list">
+                <a href="/<%=album.user.id %>/album/view/<%=album.id %>" target="_blank"><img class="PhotoBorder" height="75" alt="<%=album.name %>" src="<%=getAlbumCover(album) %>" width="75"></a>
+                <p class="margintop5px">
+                    <a class="plain" href="/<%=album.user.id %>/album/view/<%=album.id %>" target="_blank"><%=album.name %>
+                        <U>
+                            <%=album.allAuthPhotoNum %>P
+                        </U>
+                    </a>
+                </p>
+            </li>
+            <% end %>
+        </ul>
+        <div style="CLEAR: both">
+        </div>
+    </div>
+</div>

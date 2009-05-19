@@ -1,0 +1,243 @@
+div.Topics table th, div.Topics table td {
+    font-size: 12px;
+    padding: 1px 3px 2px 3px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+div.Topics table th {
+    color: #666;
+    font-weight: normal;
+    text-align: left;
+}
+
+.PostForm dl {
+    width: 550px;
+    margin: 10px auto;
+}
+
+.PostForm dt {
+    float: left;
+    width: 90px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.PostForm dd {
+    margin: 0 0 10px 80px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #666;
+}
+
+.PostForm dd span {
+    color: #ccc;
+}
+
+.PostForm dd input#submit {
+    font-size: 14px;
+}
+
+div.Topic, div.Post {
+    position: relative;
+    width: 530px;
+    padding: 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+div.Topic {
+    margin-top: 1em;
+}
+
+div.Post {
+    padding: 10px 0;
+    margin-left: 60px;
+    width: 490px;
+}
+
+div.PostContent {
+    margin-left: 70px;
+}
+
+div.PostEditor {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #ccc;
+    overflow: visible;
+}
+
+div#reply_form {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+div.Forum table th, div.Forum table td {
+    font-size: 12px;
+    padding: 1px 3px 2px 3px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+div.Forum table th {
+    color: #666;
+    font-weight: normal;
+    text-align: left;
+}
+
+div.Forum .Pager {
+    padding: 5px 10px;
+    text-align: right;
+}
+
+div.Forum .Pager a {
+    margin-right: 10px;
+}
+
+td.FloatTopic {
+    font-weight: bold;
+}
+
+.AlbumComments {
+    position: relative;
+}
+
+div.SetComment {
+    position: relative;
+    padding: 5px;
+    margin: 5px 0 0 0;
+}
+
+div.SetCommentPreview {
+    padding: 5px;
+    margin: 5px 0 0 0;
+    background-color: #EEF2FD;
+    border: 1px solid #D3DEFA;
+}
+
+div.Comment {
+    position: relative;
+    width: 440px;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    overflow: hidden;
+}
+
+div.Comment .CommentText {
+    padding: 0px;
+}
+
+div.CommentPreview {
+    padding: 5px;
+    width: 440px;
+    margin: 5px 0 0 0;
+    background-color: #EEF2FD;
+    border: 1px solid #D3DEFA;
+    overflow: hidden;
+}
+
+div#commentMaker #comment_content {
+    width: 450px;
+}
+
+div#commentMaker {
+    padding-top: 0px;
+}
+
+div.TopicSearch {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 4;
+}
+
+div.SearchTopic {
+    margin-top: 1em;
+    border-top: 1px solid #f3f3f3;
+}
+
+div.SearchTopic #keyword, div.TopicSearch #keyword {
+    width: 120px;
+    margin-right: 0;
+}
+
+div.SearchTopic #submit, div.TopicSearch #submit {
+    margin-bottom: 0;
+}
+
+.locked {
+    background: url(/images/locked.gif) no-repeat 445px top;
+}
+
+.sign {
+    width: 95%;
+    border-top: 1px dashed #999;
+	padding:5px;
+    font-style: italic;
+    color: #666;
+}
+
+.modified {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #999;
+}
+
+#links td {
+    height: 25px;
+}
+
+#links th {
+    font-weight: bold;
+}
+
+#links .noline td {
+    border: none;
+}
+
+.left_line {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 0px 5px 1px 0px;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+div.SetLeaveWord {
+    position: relative;
+    padding: 5px;
+    margin: 5px 0 0 0;
+}
+
+div.SetLeaveWordPreview {
+    padding: 5px;
+    margin: 5px 0 0 0;
+    background-color: #EEF2FD;
+    border: 1px solid #D3DEFA;
+}
+
+div.LeaveWord {
+    position: relative;
+    width: 440px;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    overflow: hidden;
+}
+
+div.LeaveWord .LeaveWordText {
+    padding: 0 0 0.7em 0;
+}
+
+div.LeaveWordPreview {
+    padding: 5px;
+    width: 440px;
+    margin: 5px 0 0 0;
+    background-color: #EEF2FD;
+    border: 1px solid #D3DEFA;
+    overflow: hidden;
+}
+
+div#LeaveWordMaker #LeaveWord_content {
+    width: 380px;
+}
+
+div#LeaveWordMaker {
+    padding-top: 1.2em;
+}

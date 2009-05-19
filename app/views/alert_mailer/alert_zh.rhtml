@@ -1,0 +1,46 @@
+<div style="background-color: #7db433; padding: 12px; width:100%">
+  <table width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="font-family: tahoma, sans-serif;">
+    <!-- HEADER ROW -->
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <p style="padding:10px 0px 10px 30px">
+            <img src="http://mmlou.com/images/logo.gif" alt="美眉楼 - 全球最大的美女图片共享平台！">
+          </p>
+        </td>
+      </tr>
+      <!-- MAIN ROW -->
+                 
+      <tr>
+        <td width="50">&nbsp;</td>
+        <td>
+          <!-- HEADING -->
+          <h1 style="font-size: 16px; color: #345B9E; padding-bottom: 3px; border-bottom: 1px solid #cccccc; margin-bottom: 20px;">
+          美眉楼重要通知 <%=Time.now.strftime("%y年%m月%d日") %></h1>
+          <!-- MAIN MESSAGE -->
+          <div style="font-size: 14px;">
+            你好，<b><%=@user.username if @user %></b> 美眉楼的住户，您的楼层被访问了 <b><%=@user.viewCount if @user %></b> 次。<br>
+            以下是您的最新通知：<br>
+            <br>				
+            <h3>
+            	<%=@content %>
+            </h3>
+            <br>
+            <a href="http://mmlou.com/user/home">更多最新精选相册...</a>
+            <br>
+            <p align="right">
+              <br>
+              美眉楼全体工作人员, <a href="http://mmlou.com/">MMLou.com</a><br>
+              08年1月20日
+            </p>
+          </div>
+        </td>
+        <td width="50">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#7db433" style="font-size: 12px; padding-top:10px; font-weight:bold;color:#ffffff" colspan="3">
+        不要回复该邮件. 这是一封美眉楼的系统邮件 - China 中国</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

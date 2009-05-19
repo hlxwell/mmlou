@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test
+END
+tc_unkeyed-algorithm.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test/tc_unkeyed-algorithm.rb
+END
+tests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test/tests.rb
+END
+tc_keying-algorithms.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test/tc_keying-algorithms.rb
+END
+tc_key-stream.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test/tc_key-stream.rb
+END
+tc_solitaire-cipher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test/tc_solitaire-cipher.rb
+END
+tc_deck.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/258/mmlou/trunk/vendor/plugins/rubyzip-0.9.1/lib/quiz1/t/solutions/Jamis%20Buck/test/tc_deck.rb
+END

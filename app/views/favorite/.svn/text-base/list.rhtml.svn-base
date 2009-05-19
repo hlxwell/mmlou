@@ -1,0 +1,38 @@
+<div id="content">
+    <%=userHeaderMenu("favorite") %>
+    <div id="container">
+        <div id="main">
+            <% if @favorites.size > 0 %>
+            <div class="Favorites">
+                <ul class="SmallList">
+                    <% for favor in @favorites %>
+                    <li>
+                        <div class="ListPhoto">
+                            <a href="/<%=favor.owner_id %>/photo/view/<%=favor.photo_id %>" title="<%=favor.photo.tags %>" target="_blank"><img src="<%=getThumbImageUrl(favor.photo) %>" width="100" border="0" alt="<%=favor.photo.tags %>"/></a>
+                        </div>
+                        <p>
+                            <%=favor.datetime.strftime("%Y-%m-%d") %>
+							<%=link_to_remote l("common_link_delete"), 
+												{:loading => "showLoading();",
+												:complete=>"hideLoadingAndReload(request.responseText);",												
+						                        :url => {:controller=>:favorite,:action=>:delete,:id=>favor.id }} if isHost %>
+												
+							<br>
+                            From <%= link_to favor.owner.username, :controller => "user", :action => "index", :user_id => favor.owner_id %>
+                        </p>
+                    </li>
+                    <% end %>
+                </ul>
+                <!--photos pager-->
+                <div class="pages">
+                    <%=page_links_full @favorite_pages %>
+                </div>
+            </div>
+            <% else %>
+            <div class="Problem">
+                <%=l("problem_label_noFavorites") %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

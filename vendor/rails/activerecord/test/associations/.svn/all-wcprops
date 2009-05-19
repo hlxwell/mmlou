@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations
+END
+callbacks_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/callbacks_test.rb
+END
+join_model_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/join_model_test.rb
+END
+eager_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/eager_test.rb
+END
+eager_singularization_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/eager_singularization_test.rb
+END
+inner_join_association_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/inner_join_association_test.rb
+END
+cascaded_eager_loading_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/cascaded_eager_loading_test.rb
+END
+extension_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/259/mmlou/trunk/vendor/rails/activerecord/test/associations/extension_test.rb
+END

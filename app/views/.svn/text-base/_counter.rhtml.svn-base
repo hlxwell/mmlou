@@ -1,0 +1,17 @@
+<div style="display:none">
+<% if not request.env['REQUEST_URI'].include?("localhost") %>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1240424-4");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript" src="http://js.tongji.yahoo.com.cn/1/33/498/ystat.js"></script><noscript><a href="http://js.tongji.yahoo.com.cn"><img src=http://js.tongji.yahoo.com.cn/1/33/498/ystat.gif></a></noscript>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/1567567.js"></script>
+<noscript><a href="http://www.51.la/?1567567" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/1567567.asp" style="border:none" /></a></noscript>
+<% end %>
+</div>

@@ -1,0 +1,105 @@
+/* tabs */
+div.tabGroupContainer {
+	width: 500px;
+	border-top: none;
+	/* border-bottom: 1px solid #cccccc; */
+}
+/* tabs */
+div.tabContainer {
+	position: relative;
+	height: 20px;
+	border-bottom: 3px solid #f1f1f1;
+	margin-top: 5px; 
+	margin-bottom: 10px;
+}
+div.tabContainer ul {
+	float: left;
+	width: 100%;
+	position:absolute;
+	bottom:-4px;
+	padding-left: 15px;
+}
+div.tabContainer ul, div.tabContainer li {
+	list-style: none;
+}
+div.tabContainer li {
+	float: left;
+	margin: 0 3px;
+	cursor: pointer;
+	background-color: #f1f1f1; 
+	padding: 3px 8px 2px 8px;
+}
+div.tabContainer li.current {
+	color: #6B9F1F;
+	font-weight: bold;
+	background-color: #fff;
+	border: 1px solid #f1f1f1; 
+	border-bottom-color: #fff;
+}
+div.tabContainer li.disabled {
+	filter: alpha(opacity=50);	
+	opacity: 0.5;	
+	cursor: default;
+}
+div.tabContainer li span {
+	float: left;
+	display: block;	
+	padding: 0px 10px 0 0;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+}
+div.tabContainer li.current span {
+	
+}
+div.tabContainer a {
+	text-decoration: none;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+}
+div.tabContainer a:link, div.tabContainer a:visited, div.tabContainer a:hover {
+	color: #333333;
+}
+div.tabContainer a:hover {
+}
+div.tabContainer li.current {
+}
+div.tabContainer li.current a, div.tabContainer li.current a:link, div.tabContainer li.current a:visited {
+}
+
+/* panel container (panel content) */
+div.panelContainer {
+	clear: both;
+	float: none;
+	border: 0;
+	height: 300px;
+	position: relative;
+}
+div.panel h1.tabTitle {
+	display: none;
+}
+div.panel {
+	/*display: none;*/
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 5px 5px 5px 5px;
+}
+/* loading */
+div.loading {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 99;
+	filter: alpha(opacity=85);
+	opacity: 0.85;
+	overflow: hidden;
+}
+div.loading div {
+	color: #333;
+	background-color: #f1f1f1;
+	padding: 10px 10px 10px 35px;
+	/*
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(/images/working.gif); */
+}

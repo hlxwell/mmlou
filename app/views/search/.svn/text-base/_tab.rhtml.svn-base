@@ -1,0 +1,43 @@
+<% if current == "user"%>
+  <div class="SearchTab">
+    <ul class="Tabs">
+      <li id="tab1" class="TabOut">
+        <a href="/search/photo"><%=l("search_label_photo")%></a>
+      </li>
+      <li id="tab2" class="TabOut">
+        <a href="/search/album"><%=l("search_label_album")%></a>
+      </li>
+      <li id="tab3" class="TabIn">
+        <%=l("search_label_user")%>
+      </li>
+    </ul>
+  </div>
+<% elsif current=="photo" %>
+<div class="SearchTab">
+  <ul class="Tabs">
+    <li id="tab1" class="TabIn">
+      <%=l("search_label_photo")%>
+    </li>
+    <li id="tab2" class="TabOut">
+      <a href="/search/album"><%=l("search_label_album")%></a>
+    </li>
+    <li id="tab3" class="TabOut">
+      <a href="/search/user"><%=l("search_label_user")%></a>
+    </li>
+  </ul>
+</div>
+<% elsif current=="album" %>
+<div class="SearchTab">
+  <ul class="Tabs">
+    <li id="tab1" class="TabOut">
+      <a href="/search/photo"><%=l("search_label_photo")%></a>
+    </li>
+    <li id="tab2" class="TabIn">
+      <%=l("search_label_album")%>
+    </li>
+    <li id="tab3" class="TabOut">
+      <a href="/search/user"><%=l("search_label_user")%></a>
+    </li>
+  </ul>
+</div>
+<% end %>

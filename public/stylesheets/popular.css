@@ -1,0 +1,51 @@
+#popularPhotos {
+    position: relative;
+    width: 500px;
+    margin: 1em auto;
+}
+
+#popularPhotos div.StatStuff {
+    padding: 1em 1em 2em 1em;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#popularPhotos div.PopularPhoto {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+#popularPhotos div.StatStuffAlbum {
+    padding: 1em 1em 3.5em 1em;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#popularPhotos div.PopularAlbum {
+    float: left;
+	position: relative;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    width: 91px;
+    height: 95px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    background: url(/images/set_case.gif) no-repeat;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#popularPhotos div.PopularStat {
+    margin-left: 100px;
+    padding: 5px;
+}
+
+#popularPhotos div.PopularStat h3 {
+    margin-top: 0;
+}
+
+.PopularDesc {
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    text-align: center;
+}

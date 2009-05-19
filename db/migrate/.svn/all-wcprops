@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/!svn/ver/262/mmlou/trunk/db/migrate
+END
+002_add_indexs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/295/mmlou/trunk/db/migrate/002_add_indexs.rb
+END
+001_init_db.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/262/mmlou/trunk/db/migrate/001_init_db.rb
+END

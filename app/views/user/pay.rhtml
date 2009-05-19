@@ -1,0 +1,35 @@
+<div id="content">
+  <%=userManageHeaderMenu("point") %>
+  <div id="rightWrapper">
+    <div id="container">
+      <div id="sidebar">
+        <%=userManageSubMenu("pay")%>
+      </div>
+      <div id="main">
+        <div id="conbox">
+          <%= form_tag(:action => :payNow) %>
+          <input type="hidden" name="user[id]" value="<%=session[:user].id %>"/>
+          <dl>
+            <dt>
+              » <%=l("userPay_label_onlinePaying") %>
+            </dt>
+            <dd>
+              <label class="info">
+                <%=l("userPay_label_choosePointToBuy") %>：<%= select("buy", "point", %w{10 50 200}) %>
+              </label>
+              <label class="info_block">
+                <%=l("userPay_label_pointPrice") %>
+              </label>
+            </dd>
+            <dd class="submit">
+            <input id="submit" type="submit" value="<%=l("userPay_button_pay")%>" class="Btn"/>
+            </dd>
+          </dl>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="clear">
+    </div>
+  </div>
+</div>

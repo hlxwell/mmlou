@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/!svn/ver/15/mmlou/trunk/test/unit
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/15/mmlou/trunk/test/unit/user_test.rb
+END
+favorite_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/test/unit/favorite_test.rb
+END
+user_information_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/15/mmlou/trunk/test/unit/user_information_test.rb
+END
+albumcomment_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/15/mmlou/trunk/test/unit/albumcomment_test.rb
+END
+admin_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/15/mmlou/trunk/test/unit/admin_test.rb
+END
+photo_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/15/mmlou/trunk/test/unit/photo_test.rb
+END
+pointoplog_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/15/mmlou/trunk/test/unit/pointoplog_test.rb
+END
+expressmail_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/test/unit/expressmail_test.rb
+END
+alert_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/15/mmlou/trunk/test/unit/alert_mailer_test.rb
+END
+album_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/15/mmlou/trunk/test/unit/album_test.rb
+END
+comment_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/15/mmlou/trunk/test/unit/comment_test.rb
+END
+news_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15/mmlou/trunk/test/unit/news_mailer_test.rb
+END
+friend_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/15/mmlou/trunk/test/unit/friend_test.rb
+END
+vipinfo_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/15/mmlou/trunk/test/unit/vipinfo_test.rb
+END
+tag_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/15/mmlou/trunk/test/unit/tag_test.rb
+END
+report_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/15/mmlou/trunk/test/unit/report_test.rb
+END

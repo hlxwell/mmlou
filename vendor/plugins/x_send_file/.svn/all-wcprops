@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/15/mmlou/trunk/vendor/plugins/x_send_file
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/15/mmlou/trunk/vendor/plugins/x_send_file/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/15/mmlou/trunk/vendor/plugins/x_send_file/init.rb
+END
+about.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/15/mmlou/trunk/vendor/plugins/x_send_file/about.yml
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/15/mmlou/trunk/vendor/plugins/x_send_file/readme
+END
