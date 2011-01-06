@@ -9,14 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 2) do
 
   create_table "albumcomments", :force => true do |t|
-    t.integer  "album_id",       :limit => 10,                 :null => false
-    t.text     "content",                      :default => "", :null => false
-    t.datetime "datetime",                                     :null => false
-    t.integer  "commentator_id", :limit => 10,                 :null => false
-    t.integer  "user_id",        :limit => 10,                 :null => false
+    t.integer  "album_id",       :limit => 10, :null => false
+    t.text     "content",                      :null => false
+    t.datetime "datetime",                     :null => false
+    t.integer  "commentator_id", :limit => 10, :null => false
+    t.integer  "user_id",        :limit => 10, :null => false
   end
 
   create_table "albums", :force => true do |t|
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 1) do
   create_table "messages", :force => true do |t|
     t.integer  "receiver_id",     :limit => 10,                 :null => false
     t.integer  "sender_id",       :limit => 10,                 :null => false
-    t.text     "content",                       :default => "", :null => false
+    t.text     "content",                                       :null => false
     t.datetime "sendDatetime",                                  :null => false
     t.datetime "receiveDatetime",                               :null => false
     t.string   "senderName",      :limit => 30, :default => "", :null => false
@@ -91,6 +91,13 @@ ActiveRecord::Schema.define(:version => 1) do
     t.integer  "addFavorCount",                :default => 0,     :null => false
   end
 
+  add_index "photos", ["album_id"], :name => "index_photos_on_album_id"
+  add_index "photos", ["isAuth"], :name => "index_photos_on_isAuth"
+  add_index "photos", ["tags"], :name => "index_photos_on_tags"
+  add_index "photos", ["lastComment_at"], :name => "index_photos_on_lastComment_at"
+  add_index "photos", ["clickCount"], :name => "index_photos_on_clickCount"
+  add_index "photos", ["id"], :name => "index_photos_on_id"
+
   create_table "pointoplogs", :force => true do |t|
     t.integer  "user_id",   :limit => 10,                 :null => false
     t.string   "operation", :limit => 45, :default => "", :null => false
@@ -101,18 +108,9 @@ ActiveRecord::Schema.define(:version => 1) do
 
   create_table "reports", :force => true do |t|
     t.string   "reportType", :limit => 50, :default => "", :null => false
-    t.text     "content",                  :default => "", :null => false
+    t.text     "content",                                  :null => false
     t.datetime "datetime",                                 :null => false
   end
-
-  create_table "sessions", :force => true do |t|
-    t.string   "session_id"
-    t.text     "data"
-    t.datetime "updated_at"
-  end
-
-  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
-  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "tags", :force => true do |t|
     t.string   "tagName",       :limit => 45, :default => "", :null => false
@@ -146,6 +144,8 @@ ActiveRecord::Schema.define(:version => 1) do
     t.string   "language",          :limit => 10,  :default => "zh",  :null => false
     t.string   "lastIP",            :limit => 15
   end
+
+  add_index "users", ["id"], :name => "index_users_on_id"
 
   create_table "vipinfos", :force => true do |t|
     t.integer  "user_id",            :limit => 10,                :null => false

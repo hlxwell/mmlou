@@ -34,6 +34,14 @@ class Album < ActiveRecord::Base
                             :message => "- "+l("validate_requireNumber"),
                             :on => :update
   
+  def cover_url
+    if cover.nil?
+      allPhotos.first.getSmallImageUrl
+    else
+      cover.getSmallImageUrl
+    end
+  end
+  
   def before_destroy
     #删除压缩包
     if self.isPacked
