@@ -5,8 +5,6 @@ class FriendController < ApplicationController
   layout "home"
   
   def list
-    
-
     @user  = User.find(params[:user_id])
     @user.beViewed    
     @title = @user.username

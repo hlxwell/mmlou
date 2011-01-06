@@ -2,7 +2,7 @@ class IndexController < ApplicationController
   layout "index"
   
   def index
-    @start = Time.now #计算页面处理时间
+    
    
     if checkCookie
       redirect_to "/user/home"

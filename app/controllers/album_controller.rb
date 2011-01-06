@@ -5,7 +5,7 @@ class AlbumController < ApplicationController
   layout "home",:except=>[:simpleView]
 
   def list
-    @start = Time.now #计算页面处理时间
+    
 
     @user=User.find(params[:user_id])
     @user.beViewed
@@ -33,7 +33,7 @@ class AlbumController < ApplicationController
   end
 
   def view
-    @start = Time.now #计算页面处理时间
+    
 
     @user  = User.find(params[:user_id])
     @user.beViewed
@@ -59,7 +59,7 @@ class AlbumController < ApplicationController
   end
 
   def storyView
-    @start = Time.now #计算页面处理时间
+    
 
     @user   = User.find(params[:user_id])
     @user.beViewed

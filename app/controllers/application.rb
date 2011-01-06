@@ -9,11 +9,15 @@ class ApplicationController < ActionController::Base
     # Pick a unique cookie name to distinguish our session data from others'
     session :session_key => 'mmlou_session_id'
   
-    ###### XXS prevent #####################################
+    ###### prevent XXS #####################################
     before_filter :ip_banner
-    before_filter :getStartTime
     before_filter :sanitize_params
     before_filter :checkLanguage
+    before_filter :calculate_execute_time
+  
+    def calculate_execute_time
+      @start = Time.now
+    end
   
     def ip_banner
         ip = request.remote_ip
@@ -21,10 +25,6 @@ class ApplicationController < ActionController::Base
         if not /211\.138\.\d+\.\d+/.match(ip).nil?
             render :text=>'No Permission!'
         end
-    end
-  
-    def getStartTime
-        @start=Time.now #计算页面处理时间
     end
   
     def sanitize_params
